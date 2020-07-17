@@ -2,7 +2,7 @@ const path = require('path')
 const name = 'ServiceFramework.Admin'
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/ServiceFramework.VueAdmin/' : '/', // TODO: Remember to change this to fit your need
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/', // TODO: Remember to change this to fit your need
   lintOnSave: process.env.NODE_ENV === 'development',
   devServer: {
     port: 8081,

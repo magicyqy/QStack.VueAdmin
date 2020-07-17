@@ -34,11 +34,15 @@
   <ItemGroup>
     <Content Include=".browserslistrc" />
     <Content Include=".editorconfig" />
-    <Content Include=".env" />
+    <Content Include=".env.development" />
+    <Content Include=".env.production" />
     <Content Include=".eslintignore" />
     <Content Include=".eslintrc.js" />
     <Content Include="cypress.json" />
     <Content Include="demo\demo.gif" />
+    <Content Include="Dockerfile">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="jest.config.js" />
     <Content Include="LICENSE" />
     <Content Include="postcss.config.js" />
