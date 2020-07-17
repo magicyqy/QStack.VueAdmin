@@ -1,0 +1,463 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>ServiceFramework.VueAdmin.Light</Name>
+    <RootNamespace>ServiceFramework.VueAdmin.Light</RootNamespace>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>ccabfcf3-bc2b-4a64-832f-c2eb7bf544f4</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>node_modules\@vue\cli-service\bin\vue-cli-service.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+    <ScriptArguments>serve</ScriptArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".browserslistrc" />
+    <Content Include=".editorconfig" />
+    <Content Include=".env" />
+    <Content Include=".eslintignore" />
+    <Content Include=".eslintrc.js" />
+    <Content Include="cypress.json" />
+    <Content Include="demo\demo.gif" />
+    <Content Include="jest.config.js" />
+    <Content Include="LICENSE" />
+    <Content Include="postcss.config.js" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\img\icons\android-chrome-192x192.png" />
+    <Content Include="public\img\icons\android-chrome-512x512.png" />
+    <Content Include="public\img\icons\apple-touch-icon-120x120.png" />
+    <Content Include="public\img\icons\apple-touch-icon-152x152.png" />
+    <Content Include="public\img\icons\apple-touch-icon-180x180.png" />
+    <Content Include="public\img\icons\apple-touch-icon-60x60.png" />
+    <Content Include="public\img\icons\apple-touch-icon-76x76.png" />
+    <Content Include="public\img\icons\apple-touch-icon.png" />
+    <Content Include="public\img\icons\favicon-16x16.png" />
+    <Content Include="public\img\icons\favicon-32x32.png" />
+    <Content Include="public\img\icons\msapplication-icon-144x144.png" />
+    <Content Include="public\img\icons\mstile-150x150.png" />
+    <Content Include="public\img\icons\safari-pinned-tab.svg" />
+    <Content Include="public\index.html" />
+    <Content Include="public\manifest.json" />
+    <Content Include="public\robots.txt" />
+    <Content Include="public\tinymce\emojis.min.js" />
+    <Content Include="public\tinymce\langs\es.js" />
+    <Content Include="public\tinymce\langs\ja.js" />
+    <Content Include="public\tinymce\langs\ko_KR.js" />
+    <Content Include="public\tinymce\langs\zh_CN.js" />
+    <Content Include="public\tinymce\skins\content.inline.min.css" />
+    <Content Include="public\tinymce\skins\content.min.css" />
+    <Content Include="public\tinymce\skins\content.mobile.min.css" />
+    <Content Include="public\tinymce\skins\fonts\tinymce-mobile.woff" />
+    <Content Include="public\tinymce\skins\skin.min.css" />
+    <Content Include="public\tinymce\skins\skin.mobile.min.css" />
+    <Content Include="README-zh.md" />
+    <Content Include="src\views\403.vue" />
+    <Content Include="src\404.vue" />
+    <Content Include="src\App.vue" />
+    <Content Include="src\assets\403\403.png" />
+    <Content Include="src\assets\404-images\404-cloud.png" />
+    <Content Include="src\assets\404-images\404.png" />
+    <Content Include="src\components\Breadcrumb\index.vue" />
+    <Content Include="src\components\El-Icons\index.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\Hamburger\index.vue" />
+    <Content Include="src\components\Home.vue" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\components\MaterialInput\index.vue" />
+    <Content Include="src\components\Pagination\index.vue" />
+    <Content Include="src\components\Sticky\index.vue" />
+    <Content Include="src\components\Tinymce\components\EditorImage.vue" />
+    <Content Include="src\components\Tinymce\index.vue" />
+    <Content Include="src\components\UploadImage\index.vue" />
+    <Content Include="src\icons\svg\404.svg" />
+    <Content Include="src\icons\svg\back-top.svg" />
+    <Content Include="src\icons\svg\bug.svg" />
+    <Content Include="src\icons\svg\chart.svg" />
+    <Content Include="src\icons\svg\clipboard.svg" />
+    <Content Include="src\icons\svg\component.svg" />
+    <Content Include="src\icons\svg\dashboard.svg" />
+    <Content Include="src\icons\svg\documentation.svg" />
+    <Content Include="src\icons\svg\drag.svg" />
+    <Content Include="src\icons\svg\edit.svg" />
+    <Content Include="src\icons\svg\education.svg" />
+    <Content Include="src\icons\svg\email.svg" />
+    <Content Include="src\icons\svg\example.svg" />
+    <Content Include="src\icons\svg\excel.svg" />
+    <Content Include="src\icons\svg\exit-fullscreen.svg" />
+    <Content Include="src\icons\svg\eye-off.svg" />
+    <Content Include="src\icons\svg\eye-on.svg" />
+    <Content Include="src\icons\svg\form.svg" />
+    <Content Include="src\icons\svg\fullscreen.svg" />
+    <Content Include="src\icons\svg\guide-2.svg" />
+    <Content Include="src\icons\svg\guide.svg" />
+    <Content Include="src\icons\svg\hamburger.svg" />
+    <Content Include="src\icons\svg\icon.svg" />
+    <Content Include="src\icons\svg\international.svg" />
+    <Content Include="src\icons\svg\language.svg" />
+    <Content Include="src\icons\svg\like.svg" />
+    <Content Include="src\icons\svg\link.svg" />
+    <Content Include="src\icons\svg\list.svg" />
+    <Content Include="src\icons\svg\lock.svg" />
+    <Content Include="src\icons\svg\message.svg" />
+    <Content Include="src\icons\svg\money.svg" />
+    <Content Include="src\icons\svg\nested.svg" />
+    <Content Include="src\icons\svg\password.svg" />
+    <Content Include="src\icons\svg\pdf.svg" />
+    <Content Include="src\icons\svg\people.svg" />
+    <Content Include="src\icons\svg\peoples.svg" />
+    <Content Include="src\icons\svg\qq.svg" />
+    <Content Include="src\icons\svg\search.svg" />
+    <Content Include="src\icons\svg\shopping.svg" />
+    <Content Include="src\icons\svg\size.svg" />
+    <Content Include="src\icons\svg\skill.svg" />
+    <Content Include="src\icons\svg\star.svg" />
+    <Content Include="src\icons\svg\tab.svg" />
+    <Content Include="src\icons\svg\table.svg" />
+    <Content Include="src\icons\svg\theme.svg" />
+    <Content Include="src\icons\svg\tree-table.svg" />
+    <Content Include="src\icons\svg\tree.svg" />
+    <Content Include="src\icons\svg\user.svg" />
+    <Content Include="src\icons\svg\wechat.svg" />
+    <Content Include="src\icons\svg\zip.svg" />
+    <Content Include="src\icons\README.md" />
+    <Content Include="src\layout\components\AppMain.vue" />
+    <Content Include="src\layout\components\Navbar\index.vue" />
+    <Content Include="src\layout\components\Sidebar\index.vue" />
+    <Content Include="src\layout\components\Sidebar\SidebarItem.vue" />
+    <Content Include="src\layout\components\Sidebar\SidebarItemLink.vue" />
+    <Content Include="src\layout\components\TagsView\index.vue" />
+    <Content Include="src\layout\components\TagsView\ScrollPane.vue" />
+    <Content Include="src\layout\index.vue" />
+    <Content Include="src\styles\element-variables.scss" />
+    <Content Include="src\styles\index.scss" />
+    <Content Include="src\styles\_mixins.scss" />
+    <Content Include="src\styles\_svgicon.scss" />
+    <Content Include="src\styles\_transition.scss" />
+    <Content Include="src\styles\_variables.scss" />
+    <Content Include="src\views\404.vue" />
+    <Content Include="src\views\sys\appfunction.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\components\groupForm.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\components\passwordForm.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\components\ruleitem.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\components\userForm.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\dataauth.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\dataauthlist.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\role.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\rolepermission.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\user.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\sys\userdetail.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\article\catagory.vue" />
+    <Content Include="src\views\article\components\Dropdown\CatagoryDropdown.vue" />
+    <Content Include="src\views\dashboard\index.vue" />
+    <Content Include="src\views\article\components\ArticleDetail.vue" />
+    <Content Include="src\views\article\components\Dropdown\Comment.vue" />
+    <Content Include="src\views\article\components\Dropdown\Platform.vue" />
+    <Content Include="src\views\article\components\Dropdown\SourceUrl.vue" />
+    <Content Include="src\views\article\components\Warning.vue" />
+    <Content Include="src\views\article\create.vue" />
+    <Content Include="src\views\article\edit.vue" />
+    <Content Include="src\views\article\list.vue" />
+    <Content Include="src\views\form\index.vue" />
+    <Content Include="src\views\login\index.vue" />
+    <Content Include="src\views\nested\menu1\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-1\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-2\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-2\menu1-2-1\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-2\menu1-2-2\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-3\index.vue" />
+    <Content Include="src\views\nested\menu2\index.vue" />
+    <Content Include="src\views\redirect\index.vue" />
+    <Content Include="src\views\shop\components\catagoryDropdown.vue" />
+    <Content Include="src\views\shop\components\productDetail.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\shop\productCreate.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\shop\productList.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\shop\productEdit.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\shop\productCatagory.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\site\navigationMenu.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\table\index.vue" />
+    <Content Include="src\views\tinymce\tinymce.vue" />
+    <Content Include="src\views\tree\index.vue" />
+    <Content Include="tests\unit\.eslintrc.js" />
+    <Content Include="tsconfig.json" />
+    <Content Include="vue.config.js" />
+    <Content Include="yarn.lock" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="demo\" />
+    <Folder Include="dist\" />
+    <Folder Include="public\" />
+    <Folder Include="public\img\" />
+    <Folder Include="public\img\icons\" />
+    <Folder Include="public\tinymce\" />
+    <Folder Include="public\tinymce\langs\" />
+    <Folder Include="public\tinymce\skins\" />
+    <Folder Include="public\tinymce\skins\fonts\" />
+    <Folder Include="src\" />
+    <Folder Include="src\api\" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\404-images\" />
+    <Folder Include="src\assets\403\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\components\Breadcrumb\" />
+    <Folder Include="src\components\Hamburger\" />
+    <Folder Include="src\components\MaterialInput\" />
+    <Folder Include="src\components\El-Icons\" />
+    <Folder Include="src\components\Pagination\" />
+    <Folder Include="src\components\Sticky\" />
+    <Folder Include="src\components\Tinymce\" />
+    <Folder Include="src\components\Tinymce\components\" />
+    <Folder Include="src\components\UploadImage\" />
+    <Folder Include="src\icons\" />
+    <Folder Include="src\icons\components\" />
+    <Folder Include="src\icons\svg\" />
+    <Folder Include="src\lang\" />
+    <Folder Include="src\layout\" />
+    <Folder Include="src\layout\components\" />
+    <Folder Include="src\layout\components\Navbar\" />
+    <Folder Include="src\layout\components\Sidebar\" />
+    <Folder Include="src\layout\components\TagsView\" />
+    <Folder Include="src\layout\mixin\" />
+    <Folder Include="src\store\" />
+    <Folder Include="src\store\modules\" />
+    <Folder Include="src\styles\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="src\views\" />
+    <Folder Include="src\views\sys\components\" />
+    <Folder Include="src\views\dashboard\" />
+    <Folder Include="src\views\article\" />
+    <Folder Include="src\views\article\components\" />
+    <Folder Include="src\views\article\components\Dropdown\" />
+    <Folder Include="src\views\form\" />
+    <Folder Include="src\views\login\" />
+    <Folder Include="src\views\nested\" />
+    <Folder Include="src\views\nested\menu1\" />
+    <Folder Include="src\views\nested\menu1\menu1-1\" />
+    <Folder Include="src\views\nested\menu1\menu1-2\" />
+    <Folder Include="src\views\nested\menu1\menu1-2\menu1-2-1\" />
+    <Folder Include="src\views\nested\menu1\menu1-2\menu1-2-2\" />
+    <Folder Include="src\views\nested\menu1\menu1-3\" />
+    <Folder Include="src\views\nested\menu2\" />
+    <Folder Include="src\views\sys\" />
+    <Folder Include="src\views\site\" />
+    <Folder Include="src\views\shop\" />
+    <Folder Include="src\views\redirect\" />
+    <Folder Include="src\views\shop\components\" />
+    <Folder Include="src\views\tinymce\" />
+    <Folder Include="src\views\table\" />
+    <Folder Include="src\views\tree\" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\unit\" />
+    <Folder Include="tests\unit\components\" />
+    <Folder Include="tests\unit\utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="babel.config.js" />
+    <Content Include="src\main.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\api\appfunction.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\articles.ts" />
+    <TypeScriptCompile Include="src\api\dataauth.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\group.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\product.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\role.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\siteSetting.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\types.d.ts" />
+    <TypeScriptCompile Include="src\api\users.ts" />
+    <TypeScriptCompile Include="src\components\El-Icons\element-icons.ts" />
+    <TypeScriptCompile Include="src\components\Tinymce\config.ts" />
+    <TypeScriptCompile Include="src\icons\components\404.ts" />
+    <TypeScriptCompile Include="src\icons\components\back-top.ts" />
+    <TypeScriptCompile Include="src\icons\components\bug.ts" />
+    <TypeScriptCompile Include="src\icons\components\chart.ts" />
+    <TypeScriptCompile Include="src\icons\components\clipboard.ts" />
+    <TypeScriptCompile Include="src\icons\components\component.ts" />
+    <TypeScriptCompile Include="src\icons\components\dashboard.ts" />
+    <TypeScriptCompile Include="src\icons\components\documentation.ts" />
+    <TypeScriptCompile Include="src\icons\components\drag.ts" />
+    <TypeScriptCompile Include="src\icons\components\edit.ts" />
+    <TypeScriptCompile Include="src\icons\components\education.ts" />
+    <TypeScriptCompile Include="src\icons\components\email.ts" />
+    <TypeScriptCompile Include="src\icons\components\example.ts" />
+    <TypeScriptCompile Include="src\icons\components\excel.ts" />
+    <TypeScriptCompile Include="src\icons\components\exit-fullscreen.ts" />
+    <TypeScriptCompile Include="src\icons\components\eye-off.ts" />
+    <TypeScriptCompile Include="src\icons\components\eye-on.ts" />
+    <TypeScriptCompile Include="src\icons\components\form.ts" />
+    <TypeScriptCompile Include="src\icons\components\fullscreen.ts" />
+    <TypeScriptCompile Include="src\icons\components\guide-2.ts" />
+    <TypeScriptCompile Include="src\icons\components\guide.ts" />
+    <TypeScriptCompile Include="src\icons\components\hamburger.ts" />
+    <TypeScriptCompile Include="src\icons\components\icon.ts" />
+    <TypeScriptCompile Include="src\icons\components\index.ts" />
+    <TypeScriptCompile Include="src\icons\components\international.ts" />
+    <TypeScriptCompile Include="src\icons\components\language.ts" />
+    <TypeScriptCompile Include="src\icons\components\like.ts" />
+    <TypeScriptCompile Include="src\icons\components\link.ts" />
+    <TypeScriptCompile Include="src\icons\components\list.ts" />
+    <TypeScriptCompile Include="src\icons\components\lock.ts" />
+    <TypeScriptCompile Include="src\icons\components\message.ts" />
+    <TypeScriptCompile Include="src\icons\components\money.ts" />
+    <TypeScriptCompile Include="src\icons\components\nested.ts" />
+    <TypeScriptCompile Include="src\icons\components\password.ts" />
+    <TypeScriptCompile Include="src\icons\components\pdf.ts" />
+    <TypeScriptCompile Include="src\icons\components\people.ts" />
+    <TypeScriptCompile Include="src\icons\components\peoples.ts" />
+    <TypeScriptCompile Include="src\icons\components\qq.ts" />
+    <TypeScriptCompile Include="src\icons\components\search.ts" />
+    <TypeScriptCompile Include="src\icons\components\shopping.ts" />
+    <TypeScriptCompile Include="src\icons\components\size.ts" />
+    <TypeScriptCompile Include="src\icons\components\skill.ts" />
+    <TypeScriptCompile Include="src\icons\components\star.ts" />
+    <TypeScriptCompile Include="src\icons\components\tab.ts" />
+    <TypeScriptCompile Include="src\icons\components\table.ts" />
+    <TypeScriptCompile Include="src\icons\components\theme.ts" />
+    <TypeScriptCompile Include="src\icons\components\tree-table.ts" />
+    <TypeScriptCompile Include="src\icons\components\tree.ts" />
+    <TypeScriptCompile Include="src\icons\components\user.ts" />
+    <TypeScriptCompile Include="src\icons\components\wechat.ts" />
+    <TypeScriptCompile Include="src\icons\components\zip.ts" />
+    <TypeScriptCompile Include="src\lang\en.ts" />
+    <TypeScriptCompile Include="src\lang\index.ts" />
+    <TypeScriptCompile Include="src\lang\zh.ts" />
+    <TypeScriptCompile Include="src\layout\components\index.ts" />
+    <TypeScriptCompile Include="src\layout\mixin\resize.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\permission.ts" />
+    <TypeScriptCompile Include="src\registerServiceWorker.ts" />
+    <TypeScriptCompile Include="src\router.ts" />
+    <TypeScriptCompile Include="src\settings.ts" />
+    <TypeScriptCompile Include="src\shims-vue.d.ts" />
+    <TypeScriptCompile Include="src\store\index.ts" />
+    <TypeScriptCompile Include="src\store\modules\app.ts" />
+    <TypeScriptCompile Include="src\store\modules\permission.ts" />
+    <TypeScriptCompile Include="src\store\modules\settings.ts" />
+    <TypeScriptCompile Include="src\store\modules\tags-view.ts" />
+    <TypeScriptCompile Include="src\store\modules\user.ts" />
+    <TypeScriptCompile Include="src\styles\element-variables.scss.d.ts" />
+    <TypeScriptCompile Include="src\styles\_variables.scss.d.ts" />
+    <TypeScriptCompile Include="src\utils\cookies.ts" />
+    <TypeScriptCompile Include="src\utils\request.ts" />
+    <TypeScriptCompile Include="src\utils\scroll-to.ts" />
+    <TypeScriptCompile Include="src\utils\validate.ts" />
+    <TypeScriptCompile Include="src\views\sys\components\index.ts" />
+    <TypeScriptCompile Include="src\views\article\components\Dropdown\index.ts" />
+    <TypeScriptCompile Include="src\views\shop\components\index.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="tests\unit\components\Breadcrumb.spec.ts" />
+    <TypeScriptCompile Include="tests\unit\utils\validate.spec.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+      npm run build
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

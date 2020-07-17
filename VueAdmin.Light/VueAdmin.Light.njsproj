@@ -1,0 +1,203 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>VueAdmin.Light</Name>
+    <RootNamespace>VueAdmin.Light</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>4d4b1fcc-14cd-439f-9b93-e5f347b3b79e</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>node_modules\@vue\cli-service\bin\vue-cli-service.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+    <ScriptArguments>serve</ScriptArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".env.production" />
+    <Content Include=".env.staging" />
+    <Content Include=".eslintignore" />
+    <Content Include=".eslintrc.js" />
+    <Content Include=".travis.yml" />
+    <Content Include="jest.config.js" />
+    <Content Include="jsconfig.json" />
+    <Content Include="mock\index.js" />
+    <Content Include="mock\mock-server.js" />
+    <Content Include="mock\table.js" />
+    <Content Include="mock\user.js" />
+    <Content Include="package-lock.json" />
+    <Content Include="postcss.config.js" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\index.html" />
+    <Content Include="README-zh.md" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="src\api\table.js" />
+    <Content Include="src\api\user.js" />
+    <Content Include="src\App.vue" />
+    <Content Include="src\assets\404_images\404.png" />
+    <Content Include="src\assets\404_images\404_cloud.png" />
+    <Content Include="src\components\Breadcrumb\index.vue" />
+    <Content Include="src\components\Hamburger\index.vue" />
+    <Content Include="src\components\Home.vue" />
+    <Content Include="src\components\SvgIcon\index.vue" />
+    <Content Include="src\icons\index.js" />
+    <Content Include="src\icons\svgo.yml" />
+    <Content Include="src\icons\svg\dashboard.svg" />
+    <Content Include="src\icons\svg\example.svg" />
+    <Content Include="src\icons\svg\eye-open.svg" />
+    <Content Include="src\icons\svg\eye.svg" />
+    <Content Include="src\icons\svg\form.svg" />
+    <Content Include="src\icons\svg\link.svg" />
+    <Content Include="src\icons\svg\nested.svg" />
+    <Content Include="src\icons\svg\password.svg" />
+    <Content Include="src\icons\svg\table.svg" />
+    <Content Include="src\icons\svg\tree.svg" />
+    <Content Include="src\icons\svg\user.svg" />
+    <Content Include="src\layout\components\AppMain.vue" />
+    <Content Include="src\layout\components\index.js" />
+    <Content Include="src\layout\components\Navbar.vue" />
+    <Content Include="src\layout\components\Sidebar\FixiOSBug.js" />
+    <Content Include="src\layout\components\Sidebar\index.vue" />
+    <Content Include="src\layout\components\Sidebar\Item.vue" />
+    <Content Include="src\layout\components\Sidebar\Link.vue" />
+    <Content Include="src\layout\components\Sidebar\Logo.vue" />
+    <Content Include="src\layout\components\Sidebar\SidebarItem.vue" />
+    <Content Include="src\layout\index.vue" />
+    <Content Include="src\layout\mixin\ResizeHandler.js" />
+    <Content Include="src\main.js" />
+    <Content Include="src\permission.js" />
+    <Content Include="src\router\index.js" />
+    <Content Include="src\settings.js" />
+    <Content Include="src\store\getters.js" />
+    <Content Include="src\store\index.js" />
+    <Content Include="src\store\modules\app.js" />
+    <Content Include="src\store\modules\settings.js" />
+    <Content Include="src\store\modules\user.js" />
+    <Content Include="src\styles\element-ui.scss" />
+    <Content Include="src\styles\index.scss" />
+    <Content Include="src\styles\mixin.scss" />
+    <Content Include="src\styles\sidebar.scss" />
+    <Content Include="src\styles\transition.scss" />
+    <Content Include="src\styles\variables.scss" />
+    <Content Include="src\utils\auth.js" />
+    <Content Include="src\utils\get-page-title.js" />
+    <Content Include="src\utils\index.js" />
+    <Content Include="src\utils\request.js" />
+    <Content Include="src\utils\validate.js" />
+    <Content Include="src\views\404.vue" />
+    <Content Include="src\views\dashboard\index.vue" />
+    <Content Include="src\views\form\index.vue" />
+    <Content Include="src\views\login\index.vue" />
+    <Content Include="src\views\nested\menu1\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-1\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-2\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-2\menu1-2-1\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-2\menu1-2-2\index.vue" />
+    <Content Include="src\views\nested\menu1\menu1-3\index.vue" />
+    <Content Include="src\views\nested\menu2\index.vue" />
+    <Content Include="src\views\table\index.vue" />
+    <Content Include="src\views\tree\index.vue" />
+    <Content Include="vue.config.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist\" />
+    <Folder Include="mock\" />
+    <Folder Include="public\" />
+    <Folder Include="src\" />
+    <Folder Include="src\api\" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\404_images\" />
+    <Folder Include="src\components\" />
+    <Folder Include="src\components\Breadcrumb\" />
+    <Folder Include="src\components\Hamburger\" />
+    <Folder Include="src\components\SvgIcon\" />
+    <Folder Include="src\icons\" />
+    <Folder Include="src\icons\svg\" />
+    <Folder Include="src\layout\" />
+    <Folder Include="src\layout\components\" />
+    <Folder Include="src\layout\components\Sidebar\" />
+    <Folder Include="src\layout\mixin\" />
+    <Folder Include="src\router\" />
+    <Folder Include="src\store\" />
+    <Folder Include="src\store\modules\" />
+    <Folder Include="src\styles\" />
+    <Folder Include="src\utils\" />
+    <Folder Include="src\views\" />
+    <Folder Include="src\views\dashboard\" />
+    <Folder Include="src\views\form\" />
+    <Folder Include="src\views\login\" />
+    <Folder Include="src\views\nested\" />
+    <Folder Include="src\views\nested\menu1\" />
+    <Folder Include="src\views\nested\menu1\menu1-1\" />
+    <Folder Include="src\views\nested\menu1\menu1-2\" />
+    <Folder Include="src\views\nested\menu1\menu1-2\menu1-2-1\" />
+    <Folder Include="src\views\nested\menu1\menu1-2\menu1-2-2\" />
+    <Folder Include="src\views\nested\menu1\menu1-3\" />
+    <Folder Include="src\views\nested\menu2\" />
+    <Folder Include="src\views\table\" />
+    <Folder Include="src\views\tree\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="babel.config.js" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+      npm run build
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
