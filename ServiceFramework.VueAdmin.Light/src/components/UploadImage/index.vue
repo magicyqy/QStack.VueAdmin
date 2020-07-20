@@ -74,7 +74,10 @@ export default class extends Vue {
     return process.env.VUE_APP_BASE_API_UPLOAD
   }
   get headers() {
-    return "Bearer " + UserModule.token
+    //console.log(UserModule.token)
+    return {
+      Authorization: "Bearer " + UserModule.token
+    }
   }
   private handleImageSuccess(res: any) {
     this.emitInput(res.data.url)

@@ -124,7 +124,10 @@ export default class extends Vue {
     }
   }
   get headers() {
-    return "Bearer " + UserModule.token
+    //console.log(UserModule.token)
+    return {
+      Authorization: "Bearer " + UserModule.token
+    }
   }
 }
 </script>
