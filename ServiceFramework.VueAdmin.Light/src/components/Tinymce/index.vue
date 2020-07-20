@@ -132,7 +132,7 @@ export default class extends Vue {
       language: this.language,
       language_url: this.language === 'en' ? '' : `${process.env.BASE_URL}tinymce/langs/${this.language}.js`,
       skin_url: `${process.env.BASE_URL}tinymce/skins`,
-      //content_css: `${process.env.BASE_URL}tinymce/skins`,
+      content_css: `${process.env.BASE_URL}tinymce/skins/content/default/content.css`,
       emoticons_database_url: `${process.env.BASE_URL}tinymce/emojis.min.js`,
       end_container_on_empty_block: true,
       powerpaste_word_import: 'clean',
