@@ -8,6 +8,7 @@
       class="image-uploader"
       drag
       :action="postAction"
+      :headers="headers"
     >
       <i class="el-icon-upload" />
       <div class="el-upload__text">
@@ -47,7 +48,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
-
+  import { UserModule } from '@/store/modules/user'
 @Component({
   name: 'UploadImage'
 })
@@ -71,6 +72,9 @@ export default class extends Vue {
 
   get postAction() {
     return process.env.VUE_APP_BASE_API_UPLOAD
+  }
+  get headers() {
+    return "Bearer " + UserModule.token
   }
   private handleImageSuccess(res: any) {
     this.emitInput(res.data.url)

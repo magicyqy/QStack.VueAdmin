@@ -21,6 +21,7 @@
         class="editor-slide-upload"
         :action="postAction"
         list-type="picture-card"
+        :headers="headers"
       >
         <el-button
           size="small"
@@ -45,7 +46,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
 import { ElUploadInternalRawFile } from 'element-ui/types/upload'
-
+  import { UserModule } from '@/store/modules/user'
 export interface IUploadObject {
   hasSuccess: boolean
   uid: number
@@ -121,6 +122,9 @@ export default class extends Vue {
         height: img.height
       }
     }
+  }
+  get headers() {
+    return "Bearer " + UserModule.token
   }
 }
 </script>
