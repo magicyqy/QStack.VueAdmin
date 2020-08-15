@@ -135,6 +135,12 @@
 
         <el-form-item prop="coverUrl" label="封面:"
                       style="margin-bottom: 30px;">
+          <el-input v-model="postForm.coverUrl"
+                    :rows="1"
+                    type="textarea"
+                    class="article-textarea"
+                    autosize
+                    placeholder="Please enter the content" />
           <upload-image v-model="postForm.coverUrl" />
         </el-form-item>
       </div>
