@@ -97,7 +97,38 @@ export const asyncRoutes: RouteConfig[] = [
       }
     ]
   },
+  {
+    path: '/fileManager',
+    name: 'fileManager',
+    component: Layout,
+    redirect: '/fileManager/fileBrowse',
+    meta: {
+      title: 'fileManager',
+      icon: 'tree-table'
+    },
+    children: [
+      {
+        path: 'fileBrowse',
+        component: () => import(/* webpackChunkName: "tree" */ '@/views/fileBrowse/index.vue'),
+        name: "fileBrowse",
+        meta: {
+          title: 'fileBrowse',
+          icon: 'tree-table'
 
+        }
+      },
+      {
+        path: 'fileeditor',
+        component: () => import(/* webpackChunkName: "tree" */ '@/views/fileBrowse/fileEditor.vue'),
+        name: "fileeditor",
+        meta: {
+          title: 'fileeditor',
+          icon: 'tree-table',
+          hidden: true
+        }
+      }
+    ]
+  },
   {
     path: '/site',
     name:'site',

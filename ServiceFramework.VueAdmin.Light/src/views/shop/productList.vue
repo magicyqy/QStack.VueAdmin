@@ -147,7 +147,7 @@
       page: 1,
       size: 20,
       name:'',
-      catagoryId: null,
+      catagoryId: '',
       dateRange: ''
     }
     private popVisible: boolean = false
@@ -166,7 +166,7 @@
       var searchOptions: any = {
         columns: [
           { name: 'name', search: { value: this.listQuery.name, Opeartor: 6 } },
-          { name: 'productCategoryId', search: { value: this.listQuery.catagoryId, Opeartor: 1 } },
+          { name: 'productCategoryId', search: { value: this.listQuery.catagoryId == null ? '' : String(this.listQuery.catagoryId), Opeartor: 1 } },
           { name: 'createDate', search: { valueMin: this.listQuery.dateRange.length > 0 ? this.listQuery.dateRange[0] : '', valueMax: this.listQuery.dateRange.length > 1 ? this.listQuery.dateRange[1] : '', Opeartor: 9 } },
         ],
         order: [],

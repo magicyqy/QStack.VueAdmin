@@ -28,7 +28,9 @@ export default {
     appfunction: '功能菜单',
     rolepermission: '权限分配',
     dataauthlist: '数据权限',
-    dataauth:'编辑数据权限'
+    dataauth: '编辑数据权限',
+    fileManager: '文件管理',
+    fileBrowse:'文件管理'
   },
   navbar: {
     logOut: '退出登录',

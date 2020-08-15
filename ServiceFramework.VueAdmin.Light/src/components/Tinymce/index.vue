@@ -1,20 +1,20 @@
 <template>
-  <div
-    :class="{fullscreen: fullscreen}"
-    class="tinymce-container"
-    :style="{width: containerWidth}"
-  >
-    <tinymce-editor
-      :id="id"
-      v-model="tinymceContent"
-      :init="initOptions"
-    />
+  <div :class="{fullscreen: fullscreen}"
+       class="tinymce-container"
+       :style="{width: containerWidth}">
+    <tinymce-editor :id="id"
+                    v-model="tinymceContent"
+                    :init="initOptions" />
+    <el-dialog class="text-file-browser"
+               title="文件浏览器"
+               :visible.sync="fileBrowserVisible"
+               width="820px">
+      <file-list :height="450" :callback="true" @callback="fileSelected" :base-path="'/wwwroot/upload'" />
+    </el-dialog>
     <div class="editor-custom-btn-container">
-      <editor-image-upload
-        :color="uploadButtonColor"
-        class="editor-upload-btn"
-        @successCBK="imageSuccessCBK"
-      />
+      <editor-image-upload :color="uploadButtonColor"
+                           class="editor-upload-btn"
+                           @successCBK="imageSuccessCBK" />
     </div>
   </div>
 </template>
@@ -56,21 +56,25 @@ import 'tinymce/plugins/template'
 import 'tinymce/plugins/textpattern'
 import 'tinymce/plugins/visualblocks'
 import 'tinymce/plugins/visualchars'
-import 'tinymce/plugins/wordcount'
+  import 'tinymce/plugins/wordcount'
+  import '@/components/Tinymce/plugins/filebrowse'
 import TinymceEditor from '@tinymce/tinymce-vue' // TinyMCE vue wrapper
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import { AppModule } from '@/store/modules/app'
 import { SettingsModule } from '@/store/modules/settings'
-  import EditorImageUpload, {IUploadObject } from './components/EditorImage.vue'
+import EditorImageUpload, {IUploadObject } from './components/EditorImage.vue'
 import { plugins, toolbar } from './config'
-
+import FileList from "@/views/fileBrowse/components/fileList.vue"
+import { isImg, isVideo } from '@/utils/file'
 const defaultId = () => 'vue-tinymce-' + +new Date() + ((Math.random() * 1000).toFixed(0) + '')
 
 @Component({
   name: 'Tinymce',
   components: {
     EditorImageUpload,
+    FileList,
     TinymceEditor
+  
   }
 })
 export default class extends Vue {
@@ -81,6 +85,7 @@ export default class extends Vue {
   @Prop({ default: '360px' }) private height!: string | number
   @Prop({ default: 'auto' }) private width!: string | number
 
+  private fileBrowserVisible=false
   private hasChange = false
   private hasInit = false
   private fullscreen = false
@@ -152,6 +157,10 @@ export default class extends Vue {
           editor.setContent(this.value)
         }
         this.hasInit = true
+        let that=this
+        editor.fileBrowser = function(){
+          that.fileBrowserVisible = true
+        }
         editor.on('NodeChange Change KeyUp SetContent', () => {
           this.hasChange = true
           this.$emit('input', editor.getContent())
@@ -183,6 +192,22 @@ export default class extends Vue {
     arr.forEach(v => {
       tinymce.insertContent(`<img class="wscnph" src="${v.url}" >`)
     })
+  }
+  private fileSelected(data: any) {
+    const tinymce = (window as any).tinymce.get(this.id)
+    let _this = this
+    let file = data || []
+    file.forEach((item:any) => {
+      if (isImg(item.url)) {
+        tinymce.insertContent(`<img src="${item.url}"  alt="${item.name}" style="max-width: 100%;max-height: auto;" />`);
+      } else if (isVideo(item.url)) {
+        tinymce.insertContent(`<video controls="controls" style="max-width: 100%;">
+                  <source src="${item.url}" /></video>`)
+      } else {
+        tinymce.insertContent(`<p><a href="${item.url}" target="_blank" rel="noopener">${item.name}</a></p>`)
+      }
+    })
+    this.fileBrowserVisible = false
   }
 }
 </script>

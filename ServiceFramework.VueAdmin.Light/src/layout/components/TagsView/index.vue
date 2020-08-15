@@ -57,6 +57,7 @@ import { RouteConfig } from 'vue-router'
 import { PermissionModule } from '@/store/modules/permission'
 import { TagsViewModule, ITagView } from '@/store/modules/tags-view'
 import ScrollPane from './ScrollPane.vue'
+import { TagsView } from '..'
 
 @Component({
   name: 'TagsView',
@@ -73,6 +74,10 @@ export default class extends Vue {
 
   get visitedViews() {
     return TagsViewModule.visitedViews
+  }
+
+  get toCloseViews() {
+    return TagsViewModule.toCloseViews
   }
 
   get routes() {
@@ -96,7 +101,17 @@ export default class extends Vue {
       document.body.removeEventListener('click', this.closeMenu)
     }
   }
+  @Watch('toCloseViews')
+  private onCloseViewsChange(views: ITagView[]) {
+ 
+    if (views && views.length === 0)
+      return
+    var curView = views.pop()
+    if(curView)
+      this.closeSelectedTag(curView)
+    TagsViewModule.clearCloseVies()
 
+  }
   mounted() {
     this.initTags()
     this.addTags()

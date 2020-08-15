@@ -158,7 +158,7 @@
     private listQuery = {
       page: 1,
       size: 20,
-      catagoryId: null,
+      catagoryId: '',
       dateRange:''
     }
     private popVisible:boolean=false
@@ -176,7 +176,7 @@
       this.listLoading = true
       var searchOptions: any = {
         columns: [
-          { name: 'catagoryId', search: { value: this.listQuery.catagoryId, Opeartor: 1 } },
+          { name: 'catagoryId', search: { value: this.listQuery.catagoryId == null ? '' : String(this.listQuery.catagoryId), Opeartor: 1 } },
           { name: 'createDate', search: { valueMin: this.listQuery.dateRange.length > 0 ? this.listQuery.dateRange[0] : '', valueMax: this.listQuery.dateRange.length > 1? this.listQuery.dateRange[1] : '', Opeartor: 9 } },
         ],
         order: [],

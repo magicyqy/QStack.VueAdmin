@@ -10,13 +10,14 @@ export interface ITagView extends Partial<Route> {
 export interface ITagsViewState {
   visitedViews: ITagView[]
   cachedViews: (string | undefined)[]
+  toCloseViews: ITagView[]
 }
 
 @Module({ dynamic: true, store, name: 'tagsView' })
 class TagsView extends VuexModule implements ITagsViewState {
   public visitedViews: ITagView[] = []
   public cachedViews: (string | undefined)[] = []
-
+  public toCloseViews: ITagView[] = []
   @Mutation
   private ADD_VISITED_VIEW(view: ITagView) {
     if (this.visitedViews.some(v => v.path === view.path)) return
@@ -95,7 +96,14 @@ class TagsView extends VuexModule implements ITagsViewState {
       }
     }
   }
-
+  @Mutation
+  private ADD_CLOSE_VIEWS(view: ITagView) {
+    this.toCloseViews.push(view)
+  }
+  @Mutation
+  private CLEARE_ALL_CLOSE_VIEWS() {
+    this.toCloseViews = []
+  }
   @Action
   public addView(view: ITagView) {
     this.ADD_VISITED_VIEW(view)
@@ -140,6 +148,15 @@ class TagsView extends VuexModule implements ITagsViewState {
   
     this.UPDATE_VISITED_VIEW(view)
   }
+  @Action
+  public clearCloseVies() {
+    this.CLEARE_ALL_CLOSE_VIEWS()
+  }
+  @Action
+  public closeCurrentView(view: ITagView) {
+    this.ADD_CLOSE_VIEWS(view)
+  }
+
 }
 
 export const TagsViewModule = getModule(TagsView)

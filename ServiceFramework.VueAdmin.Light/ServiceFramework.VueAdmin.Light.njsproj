@@ -47,6 +47,24 @@
     <Content Include="LICENSE" />
     <Content Include="postcss.config.js" />
     <Content Include="public\favicon.ico" />
+    <Content Include="public\images\file\audio.svg" />
+    <Content Include="public\images\file\cad.svg" />
+    <Content Include="public\images\file\collect.svg" />
+    <Content Include="public\images\file\excel.svg" />
+    <Content Include="public\images\file\exe.svg" />
+    <Content Include="public\images\file\folder.svg" />
+    <Content Include="public\images\file\html.svg" />
+    <Content Include="public\images\file\image.svg" />
+    <Content Include="public\images\file\iso.svg" />
+    <Content Include="public\images\file\other.svg" />
+    <Content Include="public\images\file\pdf.svg" />
+    <Content Include="public\images\file\ppt.svg" />
+    <Content Include="public\images\file\psd.svg" />
+    <Content Include="public\images\file\recycle.svg" />
+    <Content Include="public\images\file\txt.svg" />
+    <Content Include="public\images\file\video.svg" />
+    <Content Include="public\images\file\word.svg" />
+    <Content Include="public\images\file\zip.svg" />
     <Content Include="public\img\icons\android-chrome-192x192.png" />
     <Content Include="public\img\icons\android-chrome-512x512.png" />
     <Content Include="public\img\icons\apple-touch-icon-120x120.png" />
@@ -83,6 +101,8 @@
     <Content Include="public\tinymce\skins\skin.min.css" />
     <Content Include="public\tinymce\skins\skin.mobile.min.css" />
     <Content Include="README-zh.md" />
+    <Content Include="src\api\file.ts" />
+    <Content Include="src\utils\file.ts" />
     <Content Include="src\views\403.vue" />
     <Content Include="src\404.vue" />
     <Content Include="src\App.vue" />
@@ -169,6 +189,17 @@
     <Content Include="src\styles\_transition.scss" />
     <Content Include="src\styles\_variables.scss" />
     <Content Include="src\views\404.vue" />
+    <Content Include="src\views\fileBrowse\components\createFolder.vue" />
+    <Content Include="src\views\fileBrowse\components\editor.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\fileBrowse\components\fileItem.vue" />
+    <Content Include="src\views\fileBrowse\components\fileList.vue" />
+    <Content Include="src\views\fileBrowse\components\uploadFile.vue" />
+    <Content Include="src\views\fileBrowse\fileEditor.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\views\fileBrowse\index.vue" />
     <Content Include="src\views\sys\appfunction.vue">
       <SubType>Code</SubType>
     </Content>
@@ -254,6 +285,8 @@
     <Folder Include="demo\" />
     <Folder Include="dist\" />
     <Folder Include="public\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\file\" />
     <Folder Include="public\img\" />
     <Folder Include="public\img\icons\" />
     <Folder Include="public\tinymce\" />
@@ -279,6 +312,8 @@
     <Folder Include="src\components\Sticky\" />
     <Folder Include="src\components\Tinymce\" />
     <Folder Include="src\components\Tinymce\components\" />
+    <Folder Include="src\components\Tinymce\plugins\" />
+    <Folder Include="src\components\Tinymce\plugins\filebrowse\" />
     <Folder Include="src\components\UploadImage\" />
     <Folder Include="src\icons\" />
     <Folder Include="src\icons\components\" />
@@ -295,6 +330,8 @@
     <Folder Include="src\styles\" />
     <Folder Include="src\utils\" />
     <Folder Include="src\views\" />
+    <Folder Include="src\views\fileBrowse\" />
+    <Folder Include="src\views\fileBrowse\components\" />
     <Folder Include="src\views\sys\components\" />
     <Folder Include="src\views\dashboard\" />
     <Folder Include="src\views\article\" />
@@ -351,6 +388,9 @@
     <TypeScriptCompile Include="src\api\users.ts" />
     <TypeScriptCompile Include="src\components\El-Icons\element-icons.ts" />
     <TypeScriptCompile Include="src\components\Tinymce\config.ts" />
+    <TypeScriptCompile Include="src\components\Tinymce\plugins\filebrowse\index.js">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\icons\components\404.ts" />
     <TypeScriptCompile Include="src\icons\components\back-top.ts" />
     <TypeScriptCompile Include="src\icons\components\bug.ts" />
@@ -424,6 +464,9 @@
     <TypeScriptCompile Include="src\utils\cookies.ts" />
     <TypeScriptCompile Include="src\utils\request.ts" />
     <TypeScriptCompile Include="src\utils\scroll-to.ts" />
+    <TypeScriptCompile Include="src\utils\url.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\utils\validate.ts" />
     <TypeScriptCompile Include="src\views\sys\components\index.ts" />
     <TypeScriptCompile Include="src\views\article\components\Dropdown\index.ts" />

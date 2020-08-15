@@ -119,8 +119,8 @@ export interface IArticleData {
   sourceUrl: string
   coverUrl: string
   createDate: string | number
-  publishTime: string | number
-  lastModifyDate: string | number
+  publishTime: string | number|null
+  lastModifyDate: string | number|null
   articleType: string | number
   disableComment: boolean
   hotTop: number

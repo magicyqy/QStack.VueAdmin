@@ -14,7 +14,12 @@ import router from '@/router'
 import i18n from '@/lang'
 import '@/icons/components'
 import '@/permission'
+//img lazy load
+import VueLazyload from 'vue-lazyload'
 
+Vue.use(VueLazyload, {
+  loading: '/images/file/loading.gif',
+})
 Vue.use(ElementUI, {
   size: AppModule.size, // Set element-ui default size
   i18n: (key: string, value: string) => i18n.t(key, value)
