@@ -53,7 +53,7 @@
         </el-form>
       <el-form v-model="form">
           <el-form-item label="排序" label-width="120px">
-            <el-input v-model="form.flowNo" autocomplete="off"></el-input>
+            <el-input v-model.number="form.flowNo" autocomplete="off" ></el-input>
           </el-form-item>
       </el-form>
         <span slot="footer" class="dialog-footer">
