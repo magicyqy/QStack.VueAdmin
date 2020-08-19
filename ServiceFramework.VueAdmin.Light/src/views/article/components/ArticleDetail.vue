@@ -45,20 +45,20 @@
                   <el-form-item label-width="60px"
                                 label="作者:"
                                 class="postInfo-container-item">
-                    <el-input  size="mini" style="text-overflow: ellipsis;padding-right: 30px;" v-model="postForm.author"></el-input>
+                    <el-input size="mini" style="text-overflow: ellipsis;padding-right: 30px;" v-model="postForm.author"></el-input>
                     <span style="position: absolute;right: -5px;top:5px;bottom:5px;line-height: 28px;display:inline-block;background: #fff;border: 1px solid #DCDFE6;padding: 0 10px;border-radius: 0 4px 4px 0;cursor:pointer;" @click="handleSelectUser(postForm.author)"><i class="el-icon-more"></i></span>
                     <!--<el-select v-model="postForm.author"
-             :remote-method="getRemoteUserList"
-             filterable
-             default-first-option
-             allow-create
-             remote
-             placeholder="Search user">
-    <el-option v-for="(item, index) in userListOptions"
-               :key="item+index"
-               :label="item"
-               :value="item" />
-  </el-select>-->
+                         :remote-method="getRemoteUserList"
+                         filterable
+                         default-first-option
+                         allow-create
+                         remote
+                         placeholder="Search user">
+                <el-option v-for="(item, index) in userListOptions"
+                           :key="item+index"
+                           :label="item"
+                           :value="item" />
+              </el-select>-->
                   </el-form-item>
                 </el-col>
                 <el-col :span="8">
@@ -113,7 +113,26 @@
           <span v-show="abstractContentLength"
                 class="word-counter">{{ abstractContentLength }}words</span>
         </el-form-item>
-
+        <el-form-item style="margin-bottom: 20px;"
+                      label-width="70px"
+                      label="SeoKeyWord:">
+          <el-input v-model="postForm.seoKeyWord"
+                    :rows="1"
+                    type="textarea"
+                    class="article-textarea"
+                    autosize
+                    placeholder="Please enter the content" />
+        </el-form-item>
+        <el-form-item style="margin-bottom: 20px;"
+                      label-width="70px"
+                      label="SeoDescription:">
+          <el-input v-model="postForm.seoDescription"
+                    :rows="1"
+                    type="textarea"
+                    class="article-textarea"
+                    autosize
+                    placeholder="Please enter the content" />
+        </el-form-item>
         <el-form-item style="margin-bottom: 20px;"
                       label-width="70px"
                       label="来源:">
