@@ -46,6 +46,8 @@
     <Content Include="jest.config.js" />
     <Content Include="LICENSE" />
     <Content Include="postcss.config.js" />
+    <Content Include="src\components\Tinymce\plugins\clipboard.min.js" />
+    <Content Include="src\components\Tinymce\plugins\prism.css" />
     <Content Include="public\favicon.ico" />
     <Content Include="public\images\file\audio.svg" />
     <Content Include="public\images\file\cad.svg" />
@@ -79,6 +81,7 @@
     <Content Include="public\img\icons\mstile-150x150.png" />
     <Content Include="public\img\icons\safari-pinned-tab.svg" />
     <Content Include="public\index.html" />
+    <Content Include="src\components\Tinymce\plugins\prism.js" />
     <Content Include="public\manifest.json" />
     <Content Include="public\robots.txt" />
     <Content Include="public\tinymce\emojis.min.js" />
@@ -189,6 +192,9 @@
     <Content Include="src\styles\_transition.scss" />
     <Content Include="src\styles\_variables.scss" />
     <Content Include="src\views\404.vue" />
+    <Content Include="src\views\article\tags.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\views\fileBrowse\components\createFolder.vue" />
     <Content Include="src\views\fileBrowse\components\editor.vue">
       <SubType>Code</SubType>
@@ -289,6 +295,8 @@
     <Folder Include="public\images\file\" />
     <Folder Include="public\img\" />
     <Folder Include="public\img\icons\" />
+    <Folder Include="public\js\" />
+    <Folder Include="public\css\" />
     <Folder Include="public\tinymce\" />
     <Folder Include="public\tinymce\langs\" />
     <Folder Include="public\tinymce\skins\" />

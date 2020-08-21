@@ -58,6 +58,9 @@ import 'tinymce/plugins/visualblocks'
 import 'tinymce/plugins/visualchars'
   import 'tinymce/plugins/wordcount'
   import '@/components/Tinymce/plugins/filebrowse'
+  //import '@/components/Tinymce/plugins/clipboard.min.js'
+  import '@/components/Tinymce/plugins/prism.js'
+  import '@/components/Tinymce/plugins/prism.css'
 import TinymceEditor from '@tinymce/tinymce-vue' // TinyMCE vue wrapper
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
 import { AppModule } from '@/store/modules/app'
@@ -213,6 +216,7 @@ export default class extends Vue {
 </script>
 
 <style lang="scss" scoped>
+ 
 .tinymce-container {
   position: relative;
   line-height: normal;

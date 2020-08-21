@@ -199,6 +199,15 @@ export const asyncRoutes: RouteConfig[] = [
           title: 'articlCatagory',
           icon: 'component'
         }
+      },
+      {
+        path: 'tags',
+        component: () => import(/* webpackChunkName: "article" */ '@/views/article/tags.vue'),
+        name: "tags",
+        meta: {
+          title: 'tags',
+          icon: 'component'
+        }
       }
     ]
   },

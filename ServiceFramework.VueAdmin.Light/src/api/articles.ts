@@ -84,6 +84,11 @@ export const deleteCatagory = (params: any) =>
     method: 'get',
     
   })
+export const deleteTag = (params: any) =>
+  request({
+    url: '/article/deleteTag/' + params,
+    method: 'get',
 
+  })
 
 

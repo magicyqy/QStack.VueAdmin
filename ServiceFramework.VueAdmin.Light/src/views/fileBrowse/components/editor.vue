@@ -46,7 +46,7 @@
    
     get breadcrumbs() {
       let parts = this.filepath.split('/')
-      console.log(parts)
+      //console.log(parts)
       if (parts[0] === '') {
         parts.shift()
       }
@@ -70,7 +70,7 @@
 
         breadcrumbs[0].name = '...'
       }
-      console.log(breadcrumbs)
+      //console.log(breadcrumbs)
       return breadcrumbs
     }
 

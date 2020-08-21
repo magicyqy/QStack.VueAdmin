@@ -129,7 +129,7 @@ import { watch } from 'fs'
           })
         }
       }
-      console.log(result)
+      //console.log(result)
       return result
     }
     @Watch('menuVisible')

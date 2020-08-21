@@ -14,6 +14,7 @@ export default {
     tree: '树tree',
     article: "文章",
     articlCatagory: "文章分类",
+    tags:"标签管理",
     product: "商城",
     productList: "商品列表",
     productEdit: "编辑商品",
