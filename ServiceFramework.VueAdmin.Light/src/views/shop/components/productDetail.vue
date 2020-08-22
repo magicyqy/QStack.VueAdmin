@@ -11,9 +11,10 @@
           <el-input v-model="postForm.imageUrl" />
         </el-col>
         <el-col :span="4">
-          <editor-image-upload :color="uploadButtonColor"
+          <el-button type="primary" @click="imageSuccessCover">选择<i class="el-icon-upload el-icon--right"></i></el-button>
+          <!--<editor-image-upload :color="uploadButtonColor"
                                class="editor-upload-btn"
-                               @successCBK="imageSuccessCover" />
+                               @successCBK="imageSuccessCover" />-->
         </el-col>
       </el-form-item>
       <el-form-item label="缩略图">
@@ -21,9 +22,10 @@
           <el-input v-model="postForm.imageThumbUrl" />
         </el-col>
         <el-col :span="4">
-          <editor-image-upload :color="uploadButtonColor"
+          <el-button type="primary" @click="imageSuccessThumb">选择<i class="el-icon-upload el-icon--right"></i></el-button>
+          <!--<editor-image-upload :color="uploadButtonColor"
                                class="editor-upload-btn"
-                               @successCBK="imageSuccessThumb" />
+                               @successCBK="imageSuccessThumb" />-->
         </el-col>
       </el-form-item>
       <el-form-item label="类别">
@@ -74,28 +76,47 @@
                         format="yyyy-MM-dd HH:mm:ss"
                         placeholder="Select date and time" />
       </el-form-item>
-      <el-form-item label="图片">
+      <el-form-item label="轮播图片">
         <el-card class="box-card">
-          <el-upload class="upload-demo"
-                      :with-credentials='true'
-                     :action="postAction"                    
-                     :on-success="onSuccess"
-                     :before-remove="beforeRemove"
-                     multiple
-                     :limit="3"
-                     :on-exceed="handleExceed"
-                     :file-list="fileList">
-            <el-button size="small" type="primary">点击上传</el-button>
-            <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
-          </el-upload>
+          <!--<el-button type="primary" >选择<i class="el-icon-upload el-icon--right"></i></el-button>-->
+          <div class="el-upload__tip">只能选择图片文件，限选3张</div>
+          <div>
+            <ul class="el-upload-list el-upload-list--picture">
+              <li v-for="(item, index) in postForm.productImages" :key="item.id+index" :tabindex="index" class="el-upload-list__item is-success">
+                <img :src="item.imageUrl"  class="el-upload-list__item-thumbnail">
+                <label  class="el-upload-list__item-status-label"><i class="el-icon-upload-success el-icon-check"></i></label><i class="el-icon-close" @click="deleteProductImage(item,index)"></i><i class="el-icon-close-tip">按 delete 键可删除</i><!----><!---->
+              </li>
+              <li class="el-upload-list__item is-success"><div tabindex="0" class="el-upload el-upload--picture-card" @click="onSuccess"><i class="el-icon-plus"></i></div></li>
+            </ul>
+              <!--<ul class="el-upload-list el-upload-list--picture-card">
+                <li v-for="(item, index) in postForm.productImages" :key="item.id+index" class="el-upload--picture-card" style="margin-right:5px;border:none;">
+                  <el-image class="image el-upload--picture-card" :src="item.imageUrl" :key="item.imageUrl" style="border:1px;"
+                            fit="contain" :preview-src-list="[item.imageUrl]"></el-image>
+                  <label class="el-upload-list__item-status-label"><i class="el-icon-upload-success el-icon-check"></i></label><i class="el-icon-close"></i><i class="el-icon-close-tip">按 delete 键可删除</i>
+                </li>
+                <li><div tabindex="0" class="el-upload el-upload--picture-card" @click="onSuccess"><i class="el-icon-plus"></i></div></li>
+              </ul>-->
+          </div>
+          <!--<el-upload class="upload-demo"
+     :with-credentials='true'
+     :action="postAction"
+     :on-success="onSuccess"
+     :before-remove="beforeRemove"
+     multiple
+     :limit="3"
+     :on-exceed="handleExceed"
+     :file-list="fileList">
+  <el-button size="small" type="primary">点击上传</el-button>
+  <div slot="tip" class="el-upload__tip">只能上传jpg/png文件，且不超过500kb</div>
+  </el-upload>-->
         </el-card>
       </el-form-item>
       <el-form-item label="下载">
         <el-card>
-          <el-card v-for="(domain, index) in postForm.productDownloads"  :key="domain.id+index" style="margin-top:5px;">
-                        
-              <el-button :id="domain.id+index" style=" padding: 3px 0;top: -10px; position: relative; left: 0px;" icon="el-icon-close" type="text" @click="deleteDowload(domain,index)"></el-button>
-           
+          <el-card v-for="(domain, index) in postForm.productDownloads" :key="domain.id+index" style="margin-top:5px;">
+
+            <el-button :id="domain.id+index" style=" padding: 3px 0;top: -10px; position: relative; left: 0px;" icon="el-icon-close" type="text" @click="deleteDowload(domain,index)"></el-button>
+
             <el-form-item label="地址">
 
               <el-input v-model="domain.downloadUrl"></el-input>
@@ -112,16 +133,22 @@
           <el-button size="small" @click="addDownload">添加</el-button>
         </el-card>
       </el-form-item>
-        <el-form-item>
-          <el-button type="primary"
-                     @click="onSubmit">
-            保存
-          </el-button>
-          <!--<el-button @click="onCancel">
-            关闭
-          </el-button>-->
-        </el-form-item>
+      <el-form-item>
+        <el-button type="primary"
+                   @click="onSubmit">
+          保存
+        </el-button>
+        <!--<el-button @click="onCancel">
+        关闭
+      </el-button>-->
+      </el-form-item>
     </el-form>
+    <el-dialog class="text-file-browser"
+               title="文件浏览器"
+               :visible.sync="fileBrowserVisible"
+               width="820px">
+      <file-list :height="450" :callback="true" @callback="fileSelected" :base-path="'/wwwroot/upload'" />
+    </el-dialog>
   </div>
 </template>
 
@@ -135,7 +162,9 @@
   import  catagoryDropdown  from './catagoryDropdown.vue'
   import { isValidURL, getParent } from '@/utils/validate'
   import { getProduct, defaultProductData, postProduct } from '@/api/product'
-import { IProductDownload, IProductImage } from '../../../api/types'
+  import { IProductDownload, IProductImage } from '../../../api/types'
+  import FileList from "@/views/fileBrowse/components/fileList.vue"
+  import { isImg, isVideo } from '@/utils/file'
   @Component({
     name: 'ProductDetail',
     components: {
@@ -143,7 +172,8 @@ import { IProductDownload, IProductImage } from '../../../api/types'
       Tinymce,
       UploadImage,
       catagoryDropdown,
-      EditorImageUpload
+      EditorImageUpload,
+      FileList
     }
   })
   export default class extends Vue {
@@ -155,7 +185,7 @@ import { IProductDownload, IProductImage } from '../../../api/types'
       //articleContentHtml: [{ validator: this.validateRequire }],
       //sourceUrl: [{ validator: this.validateSourceUrl, trigger: 'blur' }]
     }
-
+    private fileBrowserVisible = false
     private postForm = Object.assign({}, defaultProductData)
     private tinymceActive = true
     private fileList:object[]=[]
@@ -235,16 +265,17 @@ import { IProductDownload, IProductImage } from '../../../api/types'
       
           
     }
-    private async onSuccess(response: any, file: any, fileList: any) {
-      file.name = response.data.url
-      
+    private async onSuccess() {
+      this.fileBrowserVisible = true;
+      //file.name = response.data.url
+      this.currentImage = 'productImages'
       //console.log(fileList)
-      this.postForm.productImages.push({
-        id:0,
-        productId: this.postForm.id,
-        imageUrl: response.data.url,
-        uploadFileId: response.data.id
-      })
+      //this.postForm.productImages.push({
+      //  id:0,
+      //  productId: this.postForm.id,
+      //  imageUrl: response.data.url,
+      //  uploadFileId: response.data.id
+      //})
       
     }
 
@@ -254,22 +285,68 @@ import { IProductDownload, IProductImage } from '../../../api/types'
     private async deleteDowload(item:IProductDownload,index:number) {
       this.postForm.productDownloads.splice(index, 1)
     }
+
+    private currentImage = '';
     //封面图片
-    private imageSuccessCover(arr: IUploadObject[]) {
-      this.postForm.imageUrl=arr[0].url
+    private imageSuccessCover() {
+      this.currentImage ='imageUrl'
+      this.fileBrowserVisible = true
       
     }
     //缩略图
-    private imageSuccessThumb(arr: IUploadObject[]) {
-      this.postForm.imageThumbUrl = arr[0].url
-      
+    private imageSuccessThumb() {
+     
+      this.currentImage ='imageThumbUrl'
+      this.fileBrowserVisible = true
+    }
+    private deleteProductImage(item: any, index: number) {
+
+      this.postForm.productImages.splice(index)
+    }
+    private fileSelected(data: any) {
+
+      let file = data || []
+      if (this.currentImage == 'productImages') {
+        if (file.length > 3)
+          return
+        file.forEach((item: any) => {
+          if (this.postForm.productImages.length == 3)
+            return
+          this.postForm.productImages.push({
+            id:0,
+            productId: this.postForm.id,
+            imageUrl: item.url,
+            uploadFileId:0
+          })
+          
+        })
+      }
+      else
+        this.$set(this.postForm, this.currentImage, file[0].url)
+      this.fileBrowserVisible = false
+      this.currentImage=''
     }
   }
 </script>
 
 <style lang="scss" scoped>
-
-  .line {
-    text-align: center;
+  .el-upload-list{
+    display:flex;
   }
+    .el-upload-list li{
+      width:148px;
+      height:148px;
+      margin-left:5px;
+      padding:0px;
+    }
+      .el-upload-list li img {
+        width: 148px;
+        height: 148px;
+         z-index: 0;
+         margin-left: 0px;
+ 
+    }
+    .line {
+      text-align: center;
+    }
 </style>

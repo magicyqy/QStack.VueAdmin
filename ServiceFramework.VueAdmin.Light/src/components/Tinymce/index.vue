@@ -151,7 +151,7 @@ export default class extends Vue {
       imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io','localhost'],
       default_link_target: '_blank',     
       link_title: false,//相对路径
-      //relative_urls: true,
+      relative_urls: false,
       //remove_script_host: false,
       //document_base_url: "http://localhost:5000/",
       nonbreaking_force_tab: true, // inserting nonbreaking space &nbsp; need Nonbreaking Space Plugin     
