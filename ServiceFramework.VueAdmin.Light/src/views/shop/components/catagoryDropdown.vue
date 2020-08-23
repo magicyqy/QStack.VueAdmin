@@ -42,6 +42,7 @@
       //this.catagoryPath = (this.$refs.cascader as any).getCheckedNodes()[0].label
       //this.catagoryPath = value[value.length - 1]
       this.$emit('input', value[value.length - 1])
+      console.log(value[value.length - 1])
     }
     private handleChange(val: any) {
 

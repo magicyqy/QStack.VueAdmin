@@ -29,7 +29,7 @@
         </el-col>
       </el-form-item>
       <el-form-item label="类别">
-        <catagoryDropdown :catagoryPath="postForm.productCategoryId" />
+        <catagoryDropdown v-model="postForm.productCategoryId" />
       </el-form-item>
       <el-form-item label="价格">
         <el-input v-model="postForm.price" />
