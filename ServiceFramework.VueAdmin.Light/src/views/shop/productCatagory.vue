@@ -161,13 +161,15 @@
 
         return
       }
+      if (this.form.parentId === -1)
+        this.form.parentId=null
       if (this.form.operate != 2)
         await postCatagory(this.form);
       else
         await deleteCatagory(this.form.id)
       this.$notify({
         title: 'Success',
-        message: 'The ${this.d_titles[this.form.operate]} successfully',
+        message:`The ${this.d_titles[this.form.operate]} successfully`,
         type: 'success',
         duration: 2000
       })
