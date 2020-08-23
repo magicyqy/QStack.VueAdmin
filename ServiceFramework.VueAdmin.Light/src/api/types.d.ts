@@ -156,8 +156,8 @@ export interface IProduct {
   seoKeyWord: string
   seoDescription: string
   state: number
-  createDate: string | number
-  publishDate: string | number
+  createDate: string | number|null
+  publishDate: string | number|null
   productImages: IProductImage[]
   productDownloads:IProductDownload[]
 }

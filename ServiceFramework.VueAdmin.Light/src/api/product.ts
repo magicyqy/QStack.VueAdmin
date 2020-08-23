@@ -17,8 +17,8 @@ export const defaultProductData: IProduct = {
   seoKeyWord: '',
   seoDescription: '',
   state: 0,
-  createDate: '',
-  publishDate: '',
+  createDate: null,
+  publishDate: null,
   productImages: [],
   productDownloads:[]
 }
