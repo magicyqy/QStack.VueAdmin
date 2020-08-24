@@ -1,14 +1,22 @@
-# ServiceFramework 后台管理,基于 vue-typescript-admin-template
+# vue-typescript-admin-template
 
-sf.VueAdmin项目是基于 vue-typescript-admin-template开发的简单后台管理系统，主要包含RBAC权限管理、博客内容管理、商品管理等功能。
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com)
+[![CircleCI](https://circleci.com/gh/Armour/vue-typescript-admin-template/tree/minimal.svg?style=shield)](https://circleci.com/gh/Armour/vue-typescript-admin-template/tree/minimal)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Template from jarvis](https://img.shields.io/badge/Hi-Jarvis-ff69b4.svg)](https://github.com/Armour/Jarvis)
 
-## Related Project
+[English](./README.md) | 简体中文
 
-[Armour/vue-typescript-admin-mock-server](https://github.com/armour/vue-typescript-admin-mock-server) (mock server for this project)
+## 总览
+ServiceFramework.VueAdmin.Light项目是基于 vue-typescript-admin-template开发的简单后台管理系统，主要包含RBAC权限管理、博客内容管理、商品管理等功能。
 
-[Armour/vue-typescript-admin-docs](https://github.com/armour/vue-typescript-admin-docs) (documentation source for this project)
+## 相关项目
 
-Javascript version:
+[Armour/vue-typescript-admin-mock-server](https://github.com/armour/vue-typescript-admin-mock-server) (Mock 服务器)
+
+[Armour/vue-typescript-admin-docs](https://github.com/armour/vue-typescript-admin-docs) (项目文档)
+
+Javascript 版本相关:
 
 [PanJiaChen/vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) (a vue2.0 minimal admin template)
 
@@ -16,58 +24,58 @@ Javascript version:
 
 [PanJiaChen/electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin) (a vue electron admin project)
 
-## Project setup
+## 如何设置以及启动项目
+
+### 安装依赖
 
 ```bash
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 启动本地开发环境（自带热启动）
 
 ```bash
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 构建生产环境 (自带压缩)
 
 ```bash
 yarn build
 ```
 
-### Lints and fixes files
+### 代码格式检查以及自动修复
 
 ```bash
 yarn lint
 ```
 
-### Run your unit tests
+### 运行单元测试
 
 ```bash
 yarn test:unit
 ```
 
-### Run your end-to-end tests
+### 运行端对端测试
 
 ```bash
 yarn test:e2e
 ```
 
-### Generate all svg components
+### 自动生成 svg 组件
 
 ```bash
 yarn svg
 ```
 
-### Customize Vue configuration
+### 自定义 Vue 配置
 
-See [Configuration Reference](https://cli.vuejs.org/config/).
+看这里 [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Browsers support
+## 浏览器支持
 
 Modern browsers and Internet Explorer 10+.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | IE10, IE11, Edge                                                                                                                                                                                                | last 2 versions                                                                                                                                                                                                   | last 2 versions                                                                                                                                                                                               | last 2 versions                                                                                                                                                                                               |
-
-
