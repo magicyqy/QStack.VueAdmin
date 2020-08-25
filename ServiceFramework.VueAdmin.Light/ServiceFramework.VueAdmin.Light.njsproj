@@ -103,7 +103,6 @@
     <Content Include="public\tinymce\skins\fonts\tinymce-mobile.woff" />
     <Content Include="public\tinymce\skins\skin.min.css" />
     <Content Include="public\tinymce\skins\skin.mobile.min.css" />
-    <Content Include="README-zh.md" />
     <Content Include="src\api\file.ts" />
     <Content Include="src\utils\file.ts" />
     <Content Include="src\views\403.vue" />
@@ -119,7 +118,6 @@
     <Content Include="src\components\Hamburger\index.vue" />
     <Content Include="src\components\Home.vue" />
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="src\components\MaterialInput\index.vue" />
     <Content Include="src\components\Pagination\index.vue" />
     <Content Include="src\components\Sticky\index.vue" />
