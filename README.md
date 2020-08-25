@@ -1,68 +1,68 @@
-# sf.vueadmin
+ï»¿# sf.vueadmin
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 
-¼òÌåÖĞÎÄ
+ç®€ä½“ä¸­æ–‡
 
-## ×ÜÀÀ
-sf.vueadminÏîÄ¿ÊÇleaf.blog²©¿ÍµÄºóÌ¨¹ÜÀíÏµÍ³£¬»ùÓÚvue-typescript-adminÄ£°å£¬Ö÷Òª¹¦ÄÜ°üº¬RBACÈ¨ÏŞ¹ÜÀí¡¢²©¿ÍÄÚÈİ¹ÜÀí¡¢ÉÌÆ·¹ÜÀíµÈ¡£
+## æ€»è§ˆ
+sf.vueadminé¡¹ç›®æ˜¯leaf.blogåšå®¢çš„åå°ç®¡ç†ç³»ç»Ÿï¼ŒåŸºäºvue-typescript-adminæ¨¡æ¿ï¼Œä¸»è¦åŠŸèƒ½åŒ…å«RBACæƒé™ç®¡ç†ã€åšå®¢å†…å®¹ç®¡ç†ã€å•†å“ç®¡ç†ç­‰ã€‚
 
-## Ïà¹ØÏîÄ¿
+## ç›¸å…³é¡¹ç›®
 
 [leaf.blog](https://github.com/magicyqy/leaf.blog)
 
 [Armour/vue-typescript-admin](https://github.com/armour/vue-typescript-admin)
 
-## ÈçºÎÉèÖÃÒÔ¼°Æô¶¯ÏîÄ¿
+## å¦‚ä½•è®¾ç½®ä»¥åŠå¯åŠ¨é¡¹ç›®
 
-### °²×°ÒÀÀµ
+### å®‰è£…ä¾èµ–
 
 ```bash
 yarn install
 ```
 
-### Æô¶¯±¾µØ¿ª·¢»·¾³£¨×Ô´øÈÈÆô¶¯£©
+### å¯åŠ¨æœ¬åœ°å¼€å‘ç¯å¢ƒï¼ˆè‡ªå¸¦çƒ­å¯åŠ¨ï¼‰
 
 ```bash
 yarn serve
 ```
 
-### ¹¹½¨Éú²ú»·¾³ (×Ô´øÑ¹Ëõ)
+### æ„å»ºç”Ÿäº§ç¯å¢ƒ (è‡ªå¸¦å‹ç¼©)
 
 ```bash
 yarn build
 ```
 
-### ´úÂë¸ñÊ½¼ì²éÒÔ¼°×Ô¶¯ĞŞ¸´
+### ä»£ç æ ¼å¼æ£€æŸ¥ä»¥åŠè‡ªåŠ¨ä¿®å¤
 
 ```bash
 yarn lint
 ```
 
-### ÔËĞĞµ¥Ôª²âÊÔ
+### è¿è¡Œå•å…ƒæµ‹è¯•
 
 ```bash
 yarn test:unit
 ```
 
-### ÔËĞĞ¶Ë¶Ô¶Ë²âÊÔ
+### è¿è¡Œç«¯å¯¹ç«¯æµ‹è¯•
 
 ```bash
 yarn test:e2e
 ```
 
-### ×Ô¶¯Éú³É svg ×é¼ş
+### è‡ªåŠ¨ç”Ÿæˆ svg ç»„ä»¶
 
 ```bash
 yarn svg
 ```
 
-### ×Ô¶¨Òå Vue ÅäÖÃ
+### è‡ªå®šä¹‰ Vue é…ç½®
 
-¿´ÕâÀï [Configuration Reference](https://cli.vuejs.org/config/).
+çœ‹è¿™é‡Œ [Configuration Reference](https://cli.vuejs.org/config/).
 
-## ä¯ÀÀÆ÷Ö§³Ö
+## æµè§ˆå™¨æ”¯æŒ
 
 Modern browsers and Internet Explorer 10+.
 
