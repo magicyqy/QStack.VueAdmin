@@ -180,3 +180,14 @@ export interface IProductDownload {
 }
 
 
+export interface IPluginInfo {
+  id: number
+  createDate: string | number | null
+  name: string
+  displayName: string,
+  version: string,
+  isEnable:boolean
+
+}
+
+

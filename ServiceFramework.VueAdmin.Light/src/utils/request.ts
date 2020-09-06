@@ -8,7 +8,7 @@ import { log } from 'util'
 
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
-  timeout: 5000
+  timeout: 30000
   //,
   ////支持跨域携带cookies使用vue.axios发送请求时配置如下：
   //withCredentials: true 
@@ -76,7 +76,8 @@ service.interceptors.response.use(
       router.replace({ path: '/403' })
       
     }
-    return new Promise(() => { });
+    return Promise.reject(error)
+    //return new Promise(() => { });
     //Message({
     //  message: error.response.data.message||error.message,
     //  type: 'error',

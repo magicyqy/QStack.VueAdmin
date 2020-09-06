@@ -225,6 +225,9 @@
     <Content Include="src\views\sys\dataauthlist.vue">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\views\sys\plugins.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\views\sys\role.vue">
       <SubType>Code</SubType>
     </Content>
@@ -379,6 +382,9 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\api\group.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="src\api\plugins.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\api\product.ts">

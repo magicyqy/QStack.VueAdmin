@@ -94,6 +94,16 @@ export const asyncRoutes: RouteConfig[] = [
           icon: 'list'
 
         }
+      },
+      {
+        path: 'plugins',
+        component: () => import(/* webpackChunkName: "admin" */ '@/views/sys/plugins.vue'),
+        name: "plugins",
+        meta: {
+          title: 'plugins',
+          icon: 'list'
+
+        }
       }
     ]
   },

@@ -31,7 +31,8 @@ export default {
     dataauthlist: '数据权限',
     dataauth: '编辑数据权限',
     fileManager: '文件管理',
-    fileBrowse:'文件管理'
+    fileBrowse: '文件管理',
+    plugins:"插件管理"
   },
   navbar: {
     logOut: '退出登录',
