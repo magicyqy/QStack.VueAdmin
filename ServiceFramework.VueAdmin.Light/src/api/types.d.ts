@@ -186,7 +186,8 @@ export interface IPluginInfo {
   name: string
   displayName: string,
   version: string,
-  isEnable:boolean
+  isEnable: boolean,
+  testUrl:string
 
 }
 

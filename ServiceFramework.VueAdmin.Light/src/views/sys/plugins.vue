@@ -3,7 +3,7 @@
 
     <el-tabs type="border-card" @tab-click="tabclick">
 
-      <el-tab-pane label="插件管理">
+      <el-tab-pane label="插件管理" >
 
         <div style="overflow:auto;" v-for="(plugin,index) in pluginList" :key="index">
           <table style="min-width:600px;" class="el-table el-table--fit el-table--border el-table--enable-row-hover el-table--scrollable-x el-table--medium">
@@ -29,6 +29,7 @@
             </tr>
             <tr>
               <td colspan="4" style="padding:10px;">
+                <p>测试地址： <el-link target="_blank" type="primary" :href="plugin.testUrl | urlFilter">{{plugin.testUrl | urlFilter}}</el-link></p>
                 {{plugin.displayName}}
               </td>
             </tr>
@@ -66,7 +67,7 @@
                title="文件浏览器"
                :visible.sync="fileBrowserVisible"
                width="820px">
-      <file-list :height="450" :callback="true" @callback="fileSelected" :base-path="'/Plugins'" />
+      <file-list :height="450" :callback="true" @callback="fileSelected" :base-path="'/app_data/pluginpackages'" />
     </el-dialog>
   </div>
 </template>
@@ -86,6 +87,9 @@ import { TabPane } from 'element-ui'
       },
       colorFilter: (status: boolean) => {
         return status ? "p-value-green" : "p-value-red"
+      },
+      urlFilter: (url: string) => {
+        return new URL(process.env.VUE_APP_BASE_API as string).origin + url
       }
 
     },
@@ -131,9 +135,9 @@ import { TabPane } from 'element-ui'
     private async installPlugin() {
       this.isInstalling = true
       await installPlugin(this.postForm)
-        .then(res => {
+        .then(res  => {
           //console.log(res)
-          this.logForm.log = res.data?res.data.message: res.statusText
+          this.logForm.log =  (res as any).message
         })
         .catch((error) => this.logForm.log=error.response.data)
         .finally(() => this.isInstalling = false)
@@ -167,8 +171,9 @@ import { TabPane } from 'element-ui'
    
     }
 
-    private async tabclick(tab:TabPane) {
-      if (tab.name === '1')
+    private async tabclick(tab: TabPane) {
+      //console.log(tab)
+      if (tab.label === '插件管理')
         await this.init()
     }
   }
