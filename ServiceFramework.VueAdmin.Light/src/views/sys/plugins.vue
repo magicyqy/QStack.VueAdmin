@@ -132,7 +132,7 @@ import { TabPane } from 'element-ui'
       this.isInstalling = true
       await installPlugin(this.postForm)
         .then(res => {
-          console.log(res)
+          //console.log(res)
           this.logForm.log = res.data?res.data.message: res.statusText
         })
         .catch((error) => this.logForm.log=error.response.data)
