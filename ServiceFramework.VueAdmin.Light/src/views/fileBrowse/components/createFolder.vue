@@ -13,7 +13,7 @@
             <el-form :rules="rules" :model="tempData" ref="ruleForm" label-width="70px" class="demo-ruleForm">
                 <el-form-item label="目录名" prop="folderName">
                     <el-input type="text" placeholder="请输入目录名" v-model="tempData.folderName"
-                              maxlength="12" show-word-limit >
+                              maxlength="100" show-word-limit >
                     </el-input>
                 </el-form-item>
             </el-form>
