@@ -44,7 +44,7 @@ import { Form } from 'element-ui'
     private rules= {
       folderName: [
         { required: true, message: '请输入文件夹名称', trigger: 'blur' },
-        { min: 1, max: 100, message: '长度在 3 到 12 个字符', trigger: 'blur' }
+        { min: 1, max: 100, message: '长度在 3 到 100 个字符', trigger: 'blur' }
       ]
     }
 
