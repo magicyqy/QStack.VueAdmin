@@ -188,7 +188,7 @@
       await postRole(this.form)
       this.$notify({
         title: 'Success',
-        message: 'The ${this.d_titles[this.form.operate]} successfully',
+        message: `'The operation done successfully`,
         type: 'success',
         duration: 2000
       })
