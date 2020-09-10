@@ -46,6 +46,12 @@
     <Content Include="jest.config.js" />
     <Content Include="LICENSE" />
     <Content Include="postcss.config.js" />
+    <Content Include="src\components\Charts\BarChart.vue" />
+    <Content Include="src\components\Charts\LineChart.vue" />
+    <Content Include="src\components\Charts\MixedChart.vue" />
+    <Content Include="src\components\GithubCorner\index.vue" />
+    <Content Include="src\components\PanThumb\index.vue" />
+    <Content Include="src\components\TextHoverEffect\Mallki.vue" />
     <Content Include="src\components\Tinymce\plugins\clipboard.min.js" />
     <Content Include="src\components\Tinymce\plugins\prism.css" />
     <Content Include="public\favicon.ico" />
@@ -193,6 +199,17 @@
     <Content Include="src\views\article\tags.vue">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="src\views\dashboard\admin\components\BarChart.vue" />
+    <Content Include="src\views\dashboard\admin\components\BoxCard.vue" />
+    <Content Include="src\views\dashboard\admin\components\LineChart.vue" />
+    <Content Include="src\views\dashboard\admin\components\PanelGroup.vue" />
+    <Content Include="src\views\dashboard\admin\components\PieChart.vue" />
+    <Content Include="src\views\dashboard\admin\components\RadarChart.vue" />
+    <Content Include="src\views\dashboard\admin\components\TodoList\index.vue" />
+    <Content Include="src\views\dashboard\admin\components\TodoList\Todo.vue" />
+    <Content Include="src\views\dashboard\admin\components\TransactionTable.vue" />
+    <Content Include="src\views\dashboard\admin\index.vue" />
+    <Content Include="src\views\dashboard\editor\index.vue" />
     <Content Include="src\views\fileBrowse\components\createFolder.vue" />
     <Content Include="src\views\fileBrowse\components\editor.vue">
       <SubType>Code</SubType>
@@ -314,11 +331,16 @@
     <Folder Include="src\assets\403\" />
     <Folder Include="src\components\" />
     <Folder Include="src\components\Breadcrumb\" />
+    <Folder Include="src\components\Charts\" />
+    <Folder Include="src\components\Charts\mixins\" />
+    <Folder Include="src\components\GithubCorner\" />
     <Folder Include="src\components\Hamburger\" />
     <Folder Include="src\components\MaterialInput\" />
     <Folder Include="src\components\El-Icons\" />
     <Folder Include="src\components\Pagination\" />
+    <Folder Include="src\components\PanThumb\" />
     <Folder Include="src\components\Sticky\" />
+    <Folder Include="src\components\TextHoverEffect\" />
     <Folder Include="src\components\Tinymce\" />
     <Folder Include="src\components\Tinymce\components\" />
     <Folder Include="src\components\Tinymce\plugins\" />
@@ -339,6 +361,10 @@
     <Folder Include="src\styles\" />
     <Folder Include="src\utils\" />
     <Folder Include="src\views\" />
+    <Folder Include="src\views\dashboard\admin\" />
+    <Folder Include="src\views\dashboard\admin\components\" />
+    <Folder Include="src\views\dashboard\admin\components\TodoList\" />
+    <Folder Include="src\views\dashboard\editor\" />
     <Folder Include="src\views\fileBrowse\" />
     <Folder Include="src\views\fileBrowse\components\" />
     <Folder Include="src\views\sys\components\" />
@@ -398,6 +424,7 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\api\types.d.ts" />
     <TypeScriptCompile Include="src\api\users.ts" />
+    <TypeScriptCompile Include="src\components\Charts\mixins\resize.ts" />
     <TypeScriptCompile Include="src\components\El-Icons\element-icons.ts" />
     <TypeScriptCompile Include="src\components\Tinymce\config.ts" />
     <TypeScriptCompile Include="src\components\Tinymce\plugins\filebrowse\index.js">

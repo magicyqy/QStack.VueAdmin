@@ -190,5 +190,12 @@ export interface IPluginInfo {
   testUrl:string
 
 }
+export interface ITransactionData {
+  orderId: string
+  timestamp: string | number
+  username: string
+  price: number
+  status: string
+}
 
 
