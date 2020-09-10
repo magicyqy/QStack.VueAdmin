@@ -76,6 +76,7 @@ service.interceptors.response.use(
       router.replace({ path: '/403' })
       
     }
+    Message(error.response.data||"error")
     return Promise.reject(error)
     //return new Promise(() => { });
     //Message({
