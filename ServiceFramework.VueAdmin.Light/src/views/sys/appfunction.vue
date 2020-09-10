@@ -294,7 +294,9 @@
       await this.getList()
 
     }
-    private async comfirmEdit(form:IFunction) {
+    private async comfirmEdit(form: IFunction) {
+      if (form.parentId == null)
+        form.parentName=null
       await postFunction(form)
       this.getList()
       this.getTree()
@@ -376,7 +378,9 @@
       //console.log('tree drag end: ', dropNode && dropNode.label, dropType);
       let postData = Object.assign({}, draggingNode.data)
       postData.parentId = dropNode.data.parentId
-      postData.code = this.gencode((this.$refs.tree as Tree).getNode(dropNode.data.parentId).data as IFunction)
+      var parentId = dropNode.data.parentId || -1
+      var parent = (this.$refs.tree as Tree).getNode(parentId).data 
+      postData.code = this.gencode(parent as IFunction)
       //console.log(postData)
       await this.comfirmEdit(postData)
      
@@ -388,7 +392,8 @@
       return map;
     }
 
-    private gencode(node: {id:number,code:string}|null) {
+    private gencode(node: { id: number, code: string } | null) {
+      
       let treenode = (this.$refs.tree as Tree).getNode(node!.id)
       if (treenode.childNodes && treenode.childNodes.length > 0) {
         let numArr = treenode.childNodes.map(i => Number((i.data as { id: number, code: string }).code))      
