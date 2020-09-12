@@ -70,13 +70,14 @@ service.interceptors.response.use(
         UserModule.ResetToken()
         location.reload() // To prevent bugs from vue-router
       })
+      return;
     }
     if (res.status === 403) {
        //location.href='/403'
       router.replace({ path: '/403' })
-      
+      return;
     }
-    Message(error.response.data||"error")
+    Message.error(error.response.data||"error")
     return Promise.reject(error)
     //return new Promise(() => { });
     //Message({
