@@ -198,11 +198,11 @@
     }
     @Watch('selectedUsers')
     private onSelectedUsersChange(val: IUser[]) {
-      //console.log(val)
+      console.log(this.currentRule)
       if (this.currentRule) {
-        if (this.currentRule.propertyType.startsWith('System.Int32'))
+        if (this.currentRule.propertyType.indexOf('System.Int32')>-1)
           this.currentRule.filterValue = val.map(v => v.id).join(",")
-        if (this.currentRule.propertyType.startsWith('System.String'))
+        if (this.currentRule.propertyType.indexOf('System.String')>-1)
           this.currentRule.filterValue = val.map(v => v.name).join(",")
       }
        

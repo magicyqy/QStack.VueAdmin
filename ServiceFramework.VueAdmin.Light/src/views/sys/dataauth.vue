@@ -151,7 +151,8 @@
       const { data }= await postRuleGroup(this.ruleForm)
       this.ruleForm.id = data
       this.$message.success("save successfully")
-      this.$router.replace('/sys/dataauth/'+data)
+      if(this.$route.params["id"]=="0")
+          this.$router.replace('/sys/dataauth/'+data)
    
     }
 
