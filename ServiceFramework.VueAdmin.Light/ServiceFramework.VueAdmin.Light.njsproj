@@ -210,17 +210,20 @@
     <Content Include="src\views\dashboard\admin\components\TransactionTable.vue" />
     <Content Include="src\views\dashboard\admin\index.vue" />
     <Content Include="src\views\dashboard\editor\index.vue" />
-    <Content Include="src\views\fileBrowse\components\createFolder.vue" />
-    <Content Include="src\views\fileBrowse\components\editor.vue">
+    <Content Include="src\views\filebrowse\components\createFolder.vue" />
+    <Content Include="src\views\filebrowse\components\editor.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\fileBrowse\components\fileItem.vue" />
-    <Content Include="src\views\fileBrowse\components\fileList.vue" />
-    <Content Include="src\views\fileBrowse\components\uploadFile.vue" />
-    <Content Include="src\views\fileBrowse\fileEditor.vue">
+    <Content Include="src\views\filebrowse\components\fileItem.vue" />
+    <Content Include="src\views\filebrowse\components\fileList.vue" />
+    <Content Include="src\views\filebrowse\components\uploadFile.vue" />
+    <Content Include="src\views\filebrowse\fileeditor.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\fileBrowse\index.vue" />
+    <Content Include="src\views\filebrowse\index.vue" />
+    <Content Include="src\views\iframe\iframe.vue">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="src\views\sys\appfunction.vue">
       <SubType>Code</SubType>
     </Content>
@@ -282,16 +285,16 @@
     <Content Include="src\views\shop\components\productDetail.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\shop\productCreate.vue">
+    <Content Include="src\views\shop\productcreate.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\shop\productList.vue">
+    <Content Include="src\views\shop\productlist.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\shop\productEdit.vue">
+    <Content Include="src\views\shop\productedit.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\shop\productCatagory.vue">
+    <Content Include="src\views\shop\productcatagory.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\views\site\navigationMenu.vue">
@@ -365,8 +368,9 @@
     <Folder Include="src\views\dashboard\admin\components\" />
     <Folder Include="src\views\dashboard\admin\components\TodoList\" />
     <Folder Include="src\views\dashboard\editor\" />
-    <Folder Include="src\views\fileBrowse\" />
-    <Folder Include="src\views\fileBrowse\components\" />
+    <Folder Include="src\views\filebrowse\" />
+    <Folder Include="src\views\filebrowse\components\" />
+    <Folder Include="src\views\iframe\" />
     <Folder Include="src\views\sys\components\" />
     <Folder Include="src\views\dashboard\" />
     <Folder Include="src\views\article\" />
@@ -501,6 +505,9 @@
     <TypeScriptCompile Include="src\styles\element-variables.scss.d.ts" />
     <TypeScriptCompile Include="src\styles\_variables.scss.d.ts" />
     <TypeScriptCompile Include="src\utils\cookies.ts" />
+    <TypeScriptCompile Include="src\utils\iframe.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\utils\request.ts" />
     <TypeScriptCompile Include="src\utils\scroll-to.ts" />
     <TypeScriptCompile Include="src\utils\url.ts">

@@ -108,18 +108,18 @@ export const asyncRoutes: RouteConfig[] = [
     ]
   },
   {
-    path: '/fileManager',
-    name: 'fileManager',
+    path: '/filebrowse',
+    name: 'filebrowse',
     component: Layout,
-    redirect: '/fileManager/fileBrowse',
+    redirect: '/filebrowse/index',
     meta: {
       title: 'fileManager',
       icon: 'tree-table'
     },
     children: [
       {
-        path: 'fileBrowse',
-        component: () => import(/* webpackChunkName: "tree" */ '@/views/fileBrowse/index.vue'),
+        path: 'index',
+        component: () => import(/* webpackChunkName: "tree" */ '@/views/filebrowse/index.vue'),
         name: "fileBrowse",
         meta: {
           title: 'fileBrowse',
@@ -129,7 +129,7 @@ export const asyncRoutes: RouteConfig[] = [
       },
       {
         path: 'fileeditor',
-        component: () => import(/* webpackChunkName: "tree" */ '@/views/fileBrowse/fileEditor.vue'),
+        component: () => import(/* webpackChunkName: "tree" */ '@/views/filebrowse/fileeditor.vue'),
         name: "fileeditor",
         meta: {
           title: 'fileeditor',
@@ -151,7 +151,7 @@ export const asyncRoutes: RouteConfig[] = [
     children: [
       {
         path: 'navigation',
-        component: () => import(/* webpackChunkName: "tree" */ '@/views/site/navigationMenu.vue'),
+        component: () => import(/* webpackChunkName: "tree" */ '@/views/site/navigation.vue'),
         name: "navigation",
         meta: {
           title: 'navigation',
@@ -233,7 +233,7 @@ export const asyncRoutes: RouteConfig[] = [
     children: [
       {
         path: 'productcreate',
-        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productCreate.vue'),
+        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productcreate.vue'),
         name: "productCreate",
         meta: {
           title: 'productCreate',
@@ -244,7 +244,7 @@ export const asyncRoutes: RouteConfig[] = [
       },
       {
         path: 'productlist',
-        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productList.vue'),
+        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productlist.vue'),
         name: "productList",
         meta: {
           title: 'productList',
@@ -254,7 +254,7 @@ export const asyncRoutes: RouteConfig[] = [
       ,
       {
         path: 'productedit/:id(\\d+)',
-        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productEdit.vue'),
+        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productedit.vue'),
         name: "productEdit",
         meta: {
           title: 'productEdit',
@@ -264,7 +264,7 @@ export const asyncRoutes: RouteConfig[] = [
       },
       {
         path: 'productcatagory',
-        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productCatagory.vue'),
+        component: () => import(/* webpackChunkName: "shop" */ '@/views/shop/productcatagory.vue'),
         name: "productCatagory",
         meta: {
           title: 'productCatagory',

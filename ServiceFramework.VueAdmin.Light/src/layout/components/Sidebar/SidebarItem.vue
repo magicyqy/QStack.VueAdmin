@@ -18,20 +18,26 @@
                        :to="resolvePath(item.path)">
       <el-menu-item :index="resolvePath(item.path)"
                     :class="{'submenu-title-noDropdown': isFirstLevel}">
-        <svg-icon v-if="item.meta.icon"
-                  :name="item.meta.icon" />
+        <!--<svg-icon v-if="item.meta.icon"
+            :name="item.meta.icon" />-->
+        <i v-if="item.meta.icon" :class="'el-icon-'+item.meta.icon" style="font-size:20px;" />
         <span v-if="item.meta.title"
               slot="title">{{ $t('route.' + item.meta.title) }}</span>
+        <span v-else
+              slot="title">{{ item.name }}</span>
       </el-menu-item>
     </sidebar-item-link>
     <el-submenu v-else
                 :index="resolvePath(item.path)"
                 popper-append-to-body>
       <template slot="title">
-        <svg-icon v-if="item.meta && item.meta.icon"
-                  :name="item.meta.icon" />
+        <!--<svg-icon v-if="item.meta && item.meta.icon"
+            :name="item.meta.icon" />-->
+        <i v-if="item.meta && item.meta.icon" :class="'el-icon-'+item.meta.icon" style="font-size:20px;" />
         <span v-if="item.meta && item.meta.title"
               slot="title">{{ $t('route.' + item.meta.title) }}</span>
+        <span v-else
+              slot="title">{{ item.name }}</span>
       </template>
       <template v-if="item.children">
         <sidebar-item v-for="child in item.children"
@@ -112,6 +118,7 @@
       if (isExternal(this.basePath)) {
         return this.basePath
       }
+     
       return path.resolve(this.basePath, routePath)
     }
   }

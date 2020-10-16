@@ -19,7 +19,8 @@ export const emptyFunction: IFunction = {
   IsLeaf: false,
   functionType: FunctionType.Menu,
   hidden: false,
-  routeName:''
+  routeName: '',
+  children:[]
 }
 export const getFunctionPage = (data: any) =>
   request({

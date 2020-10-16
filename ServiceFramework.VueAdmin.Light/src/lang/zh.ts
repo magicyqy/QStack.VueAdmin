@@ -13,9 +13,9 @@ export default {
     profile: '个人中心',
     tree: '树tree',
     article: "文章",
-    articlCatagory: "文章分类",
+    articleCatagory: "文章分类",
     tags:"标签管理",
-    product: "商城",
+    shop: "商城",
     productList: "商品列表",
     productEdit: "编辑商品",
     productCreate: "添加商品",
@@ -31,7 +31,7 @@ export default {
     dataauthlist: '数据权限',
     dataauth: '编辑数据权限',
     fileManager: '文件管理',
-    fileBrowse: '文件管理',
+    filebrowse: '文件管理',
     plugins:"插件管理"
   },
   navbar: {

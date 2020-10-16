@@ -68,7 +68,7 @@ import { AppModule } from '@/store/modules/app'
 import { SettingsModule } from '@/store/modules/settings'
 import EditorImageUpload, {IUploadObject } from './components/EditorImage.vue'
 import { plugins, toolbar } from './config'
-import FileList from "@/views/fileBrowse/components/fileList.vue"
+import FileList from "@/views/filebrowse/components/fileList.vue"
 import { isImg, isVideo } from '@/utils/file'
 const defaultId = () => 'vue-tinymce-' + +new Date() + ((Math.random() * 1000).toFixed(0) + '')
 

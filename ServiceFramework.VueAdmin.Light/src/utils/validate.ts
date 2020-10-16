@@ -13,11 +13,13 @@ export const isValidURL = (url: string) => {
   return reg.test(url)
 }
 
-export const getTreeData=(data:any)=>{
+export const getTreeData = (data: any) => {
+  if (!data)
+    return
   // 循环遍历json数据
   for (var i = 0; i < data.length; i++) {
 
-    if (data[i].children.length < 1) {
+    if (data[i].children&&data[i].children.length < 1) {
       // children若为空数组，则将children设为undefined
       delete data[i].children ;
     } else {

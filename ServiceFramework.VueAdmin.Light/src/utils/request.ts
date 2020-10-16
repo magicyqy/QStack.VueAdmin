@@ -9,9 +9,9 @@ import { log } from 'util'
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API,
   timeout: 30000
-  //,
+  ,
   ////支持跨域携带cookies使用vue.axios发送请求时配置如下：
-  //withCredentials: true 
+  withCredentials: true 
 })
 
 // Request interceptors

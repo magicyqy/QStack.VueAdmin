@@ -194,7 +194,7 @@ import { watch } from 'fs'
        }
        else {
          const query = { ...this.$route.query }        
-         this.$router.push({ path: '/fileManager/fileeditor', query: { filePath: query.filePath + '/' + file.name } });
+         this.$router.push({ path: '/filebrowse/fileeditor', query: { filePath: query.filePath + '/' + file.name } });
        }
      }
 

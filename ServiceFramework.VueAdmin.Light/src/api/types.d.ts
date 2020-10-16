@@ -48,7 +48,8 @@ export interface IFunction {
   IsLeaf: boolean,
   functionType: number
   hidden: boolean
-  routeName:string
+  routeName: string
+  children: IFunction[]
 }
 
 export interface IDataPrivilegeRule {

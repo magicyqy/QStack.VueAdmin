@@ -7,23 +7,19 @@
       ref="scrollPane"
       class="tags-view-wrapper"
     >
-      <router-link
-        v-for="tag in visitedViews"
-        ref="tag"
-        :key="tag.path"
-        :class="isActive(tag) ? 'active' : ''"
-        :to="{path: tag.path, query: tag.query, fullPath: tag.fullPath}"
-        tag="span"
-        class="tags-view-item"
-        @click.middle.native="!isAffix(tag)?closeSelectedTag(tag):''"
-        @contextmenu.prevent.native="openMenu(tag, $event)"
-      >
-        {{ tag.tagTitle|| $t('route.' + tag.meta.title) }}
-        <span
-          v-if="!isAffix(tag)"
-          class="el-icon-close"
-          @click.prevent.stop="closeSelectedTag(tag)"
-        />
+      <router-link v-for="tag in visitedViews"
+                   ref="tag"
+                   :key="tag.path"
+                   :class="isActive(tag) ? 'active' : ''"
+                   :to="{path: tag.path, query: tag.query, fullPath: tag.fullPath}"
+                   tag="span"
+                   class="tags-view-item"
+                   @click.middle.native="!isAffix(tag)?closeSelectedTag(tag):''"
+                   @contextmenu.prevent.native="openMenu(tag, $event)">
+        {{ tag.tagTitle||(tag.meta.title? $t('route.' + tag.meta.title):tag.name) }}
+        <span v-if="!isAffix(tag)"
+              class="el-icon-close"
+              @click.prevent.stop="closeSelectedTag(tag)" />
       </router-link>
     </scroll-pane>
     <ul

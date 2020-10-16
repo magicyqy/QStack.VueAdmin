@@ -50,10 +50,18 @@
             </el-col>
             <el-col :span="12">
               <el-button type="primary" @click="uploadPlugin">选择<i class="el-icon-upload el-icon--right"></i></el-button>
-              <el-button type="primary"  :loading="isInstalling" @click="installPlugin">安装<i class="el-icon-orange el-icon--right"></i></el-button>
             </el-col>
           </el-form-item>
-
+          <el-form-item label="IsMigration">
+            <el-switch v-model="postForm.isMigration"
+                       active-color="#13ce66"
+                       inactive-color="#bbbbbb">
+            </el-switch>
+          </el-form-item>
+          <el-form-item label="">
+           
+            <el-button type="primary" :loading="isInstalling" @click="installPlugin">安装<i class="el-icon-orange el-icon--right"></i></el-button>
+          </el-form-item>
         </el-form>
         <el-form ref="logForm"   label-width="120px">
         <el-form-item label="">
@@ -74,7 +82,7 @@
 
 <script lang="ts">
   import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
-  import FileList from "@/views/fileBrowse/components/fileList.vue"
+  import FileList from "@/views/filebrowse/components/fileList.vue"
   import { IPluginInfo } from "@/api/types"
   import { getPlugins, installPlugin, disablePlugin, enablePlugin, deletePlugin } from "@/api/plugins"
 import { TabPane } from 'element-ui'
@@ -103,7 +111,8 @@ import { TabPane } from 'element-ui'
     private isStarting = false
     private isStopping=false
     private postForm = {
-      package: ''
+      package: '',
+      isMigration: true
     
     }
     private logForm = {
