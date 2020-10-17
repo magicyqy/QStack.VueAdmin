@@ -163,7 +163,7 @@
   import { isValidURL, getParent } from '@/utils/validate'
   import { getProduct, defaultProductData, postProduct } from '@/api/product'
   import { IProductDownload, IProductImage } from '../../../api/types'
-  import FileList from "@/views/filebrowse/components/fileList.vue"
+  import FileList from "@/views/filemanager/components/fileList.vue"
   import { isImg, isVideo } from '@/utils/file'
   @Component({
     name: 'ProductDetail',

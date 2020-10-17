@@ -20,7 +20,7 @@
             </span>
         </el-breadcrumb>
         <!--80是顶部和底部的大概高度，顶部的button固定为small-->
-        <div class="file-list-center" ref="fileListCenter" :style="{height: (height-100) +'px'}">
+        <div    v-loading="loading" class="file-list-center" ref="fileListCenter" :style="{height: (height-100) +'px'}">
             <file-item :file="file" @click.stop.native="fileClick(file,index,$event)" v-for="(file,index) in fileList"
                        @dblclick.stop.native="fileDBClick(file,index,$event)"
                        @contextmenu.prevent.native="openMenu(file,$event)"
@@ -92,6 +92,7 @@ import { watch } from 'fs'
     private rightClickFile:any= null
     private confirmDelete = false
     private formatFileSize = formatFileSize
+    private loading=true
     get checkSelected() {
       var that=this
       return function (name:string) {
@@ -166,8 +167,10 @@ import { watch } from 'fs'
     }
 
     private listFile() {
+      this.loading = true
       fileApi.listFile({ prefix: this.currentPath }).then(res => {
         this.fileList = res.data || []
+        this.loading = false
       })
     }
 
@@ -194,7 +197,7 @@ import { watch } from 'fs'
        }
        else {
          const query = { ...this.$route.query }        
-         this.$router.push({ path: '/filebrowse/fileeditor', query: { filePath: query.filePath + '/' + file.name } });
+         this.$router.push({ path: '/filemanager/fileeditor', query: { filePath: query.filePath + '/' + file.name } });
        }
      }
 

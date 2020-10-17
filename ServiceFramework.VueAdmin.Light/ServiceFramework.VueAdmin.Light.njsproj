@@ -210,17 +210,17 @@
     <Content Include="src\views\dashboard\admin\components\TransactionTable.vue" />
     <Content Include="src\views\dashboard\admin\index.vue" />
     <Content Include="src\views\dashboard\editor\index.vue" />
-    <Content Include="src\views\filebrowse\components\createFolder.vue" />
-    <Content Include="src\views\filebrowse\components\editor.vue">
+    <Content Include="src\views\filemanager\components\createFolder.vue" />
+    <Content Include="src\views\filemanager\components\editor.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\filebrowse\components\fileItem.vue" />
-    <Content Include="src\views\filebrowse\components\fileList.vue" />
-    <Content Include="src\views\filebrowse\components\uploadFile.vue" />
-    <Content Include="src\views\filebrowse\fileeditor.vue">
+    <Content Include="src\views\filemanager\components\fileItem.vue" />
+    <Content Include="src\views\filemanager\components\fileList.vue" />
+    <Content Include="src\views\filemanager\components\uploadFile.vue" />
+    <Content Include="src\views\filemanager\fileeditor.vue">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="src\views\filebrowse\index.vue" />
+    <Content Include="src\views\filemanager\index.vue" />
     <Content Include="src\views\iframe\iframe.vue">
       <SubType>Code</SubType>
     </Content>
@@ -368,8 +368,8 @@
     <Folder Include="src\views\dashboard\admin\components\" />
     <Folder Include="src\views\dashboard\admin\components\TodoList\" />
     <Folder Include="src\views\dashboard\editor\" />
-    <Folder Include="src\views\filebrowse\" />
-    <Folder Include="src\views\filebrowse\components\" />
+    <Folder Include="src\views\filemanager\" />
+    <Folder Include="src\views\filemanager\components\" />
     <Folder Include="src\views\iframe\" />
     <Folder Include="src\views\sys\components\" />
     <Folder Include="src\views\dashboard\" />

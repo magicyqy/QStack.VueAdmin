@@ -82,7 +82,7 @@
 
 <script lang="ts">
   import { Component, Prop, Vue, Watch } from 'vue-property-decorator'
-  import FileList from "@/views/filebrowse/components/fileList.vue"
+  import FileList from "@/views/filemanager/components/fileList.vue"
   import { IPluginInfo } from "@/api/types"
   import { getPlugins, installPlugin, disablePlugin, enablePlugin, deletePlugin } from "@/api/plugins"
 import { TabPane } from 'element-ui'

@@ -30,7 +30,7 @@ export default {
     rolepermission: '权限分配',
     dataauthlist: '数据权限',
     dataauth: '编辑数据权限',
-    fileManager: '文件管理',
+    filemanager: '文件管理',
     filebrowse: '文件管理',
     plugins:"插件管理"
   },

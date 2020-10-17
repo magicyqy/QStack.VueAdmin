@@ -128,8 +128,8 @@
       this.save()
     }
     private removePrefix(url:string) {
-      if (url.startsWith('/fileManager/fileBrowse')) {
-        url = url.replace('/fileManager/fileBrowse','')
+      if (url.startsWith('/filemanager/index')) {
+        url = url.replace('/filemanager/index','')
       }
 
       if (url === '') url = '/'
