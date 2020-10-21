@@ -149,7 +149,7 @@ export default class extends Vue {
       code_dialog_width: 1000,
       advlist_bullet_styles: 'square',
       advlist_number_styles: 'default',
-      imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io','localhost','magicyqy.cn','www.magicyqy.cn'],
+      imagetools_cors_hosts: ['www.tinymce.com', 'codepen.io', 'localhost', 'qystack.top','www.qystack.top'],
       default_link_target: '_blank',     
       link_title: false,//相对路径
       relative_urls: false,
