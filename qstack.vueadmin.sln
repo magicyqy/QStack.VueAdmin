@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ServiceFramework.VueAdmin.Light", "ServiceFramework.VueAdmin.Light\ServiceFramework.VueAdmin.Light.njsproj", "{CCABFCF3-BC2B-4A64-832F-C2EB7BF544F4}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "QStack.VueAdmin.Light", "QStack.VueAdmin.Light\QStack.VueAdmin.Light.njsproj", "{CCABFCF3-BC2B-4A64-832F-C2EB7BF544F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
