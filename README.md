@@ -10,7 +10,7 @@ QStack.VueAdmin项目是QStack.Framework的后台管理界面，基于vue-typesc
 
 ## 相关项目
 
-[leaf.blog](https://github.com/magicyqy/QStack.Framework)
+[QStack.Framework](https://github.com/magicyqy/QStack.Framework)
 
 [Armour/vue-typescript-admin](https://github.com/armour/vue-typescript-admin)
 
