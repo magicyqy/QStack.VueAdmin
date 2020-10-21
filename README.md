@@ -17,10 +17,10 @@ sf.vueadmin项目是leaf.blog博客的后台管理系统，基于vue-typescript-
 ## 演示
 
 ##### 后台管理
-<https://demo.magicyqy.cn>	账号：admin	密码：123456
+<https://demo.qystack.top>	账号：admin	密码：123456
 
 ##### 前台网站	
-<https://www.magicyqy.cn>
+<https://www.qystack.top>
 
 ## 如何设置以及启动项目
 
